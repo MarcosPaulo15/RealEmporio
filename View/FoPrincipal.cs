@@ -15,6 +15,19 @@ namespace EmporioRoyal.View
         public FoPrincipal()
         {
             InitializeComponent();
+            pcLogo.Visible = true;
+        }
+
+        private void adicionarNovoClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*UcNovoCliente ucNewClient = new UcNovoCliente();
+            panMenu.Controls.Add(ucNewClient);
+            ucNewClient.Dock = DockStyle.Fill;*/
+
+            var myControl = new UcNovoCliente();
+            pcLogo.Controls.Add(myControl);
+            myControl.Dock = DockStyle.Fill;
+            //spcLogo.Visible = false;
         }
     }
 }

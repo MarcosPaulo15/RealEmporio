@@ -12,11 +12,6 @@ namespace EmporioRoyal
             InitializeComponent();
         }
 
-        public void FunctionDefinition()
-        {
-
-        }
-
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             string usuario = txbUser.Text;

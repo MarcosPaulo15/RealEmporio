@@ -1,14 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\marcos.machado.IAGED\\source\\repos\\EmporioRoyal\\",
+  "WorkspaceRootPath": "C:\\gitprojets\\RealEmporio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\users\\marcos.machado.iaged\\source\\repos\\emporioroyal\\view\\foprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\foprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojets\\realemporio\\view\\ucnovocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\ucnovocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\users\\marcos.machado.iaged\\source\\repos\\emporioroyal\\view\\foprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\foprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojets\\realemporio\\view\\ucnovocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\ucnovocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojets\\realemporio\\model\\mdnovoclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:model\\mdnovoclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojets\\realemporio\\bd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:bd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,26 +31,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FoPrincipal.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\marcos.machado.IAGED\\source\\repos\\EmporioRoyal\\View\\FoPrincipal.cs",
-              "RelativeDocumentMoniker": "View\\FoPrincipal.cs",
-              "ToolTip": "C:\\Users\\marcos.machado.IAGED\\source\\repos\\EmporioRoyal\\View\\FoPrincipal.cs [Projeto]*",
-              "RelativeToolTip": "View\\FoPrincipal.cs [Projeto]*",
+              "Title": "UcNovoCliente.cs",
+              "DocumentMoniker": "C:\\gitprojets\\RealEmporio\\View\\UcNovoCliente.cs",
+              "RelativeDocumentMoniker": "View\\UcNovoCliente.cs",
+              "ToolTip": "C:\\gitprojets\\RealEmporio\\View\\UcNovoCliente.cs",
+              "RelativeToolTip": "View\\UcNovoCliente.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAwwDsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T18:10:20.574Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-01-17T19:13:52.719Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FoPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\marcos.machado.IAGED\\source\\repos\\EmporioRoyal\\View\\FoPrincipal.cs",
-              "RelativeDocumentMoniker": "View\\FoPrincipal.cs",
-              "ToolTip": "C:\\Users\\marcos.machado.IAGED\\source\\repos\\EmporioRoyal\\View\\FoPrincipal.cs*",
-              "RelativeToolTip": "View\\FoPrincipal.cs*",
-              "ViewState": "AgIAAAcAAAAAAAAAAAArwBIAAAAAAAAAAAAAAA==",
+              "Title": "UcNovoCliente.cs [Projeto]",
+              "DocumentMoniker": "C:\\gitprojets\\RealEmporio\\View\\UcNovoCliente.cs",
+              "RelativeDocumentMoniker": "View\\UcNovoCliente.cs",
+              "ToolTip": "C:\\gitprojets\\RealEmporio\\View\\UcNovoCliente.cs [Projeto]",
+              "RelativeToolTip": "View\\UcNovoCliente.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T17:25:47.189Z",
+              "WhenOpened": "2025-01-17T19:13:50.745Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BD.cs",
+              "DocumentMoniker": "C:\\gitprojets\\RealEmporio\\BD.cs",
+              "RelativeDocumentMoniker": "BD.cs",
+              "ToolTip": "C:\\gitprojets\\RealEmporio\\BD.cs",
+              "RelativeToolTip": "BD.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAqwEcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T19:07:24.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MdNovoClient.cs",
+              "DocumentMoniker": "C:\\gitprojets\\RealEmporio\\Model\\MdNovoClient.cs",
+              "RelativeDocumentMoniker": "Model\\MdNovoClient.cs",
+              "ToolTip": "C:\\gitprojets\\RealEmporio\\Model\\MdNovoClient.cs",
+              "RelativeToolTip": "Model\\MdNovoClient.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAUwD4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T18:53:50.966Z",
               "EditorCaption": ""
             }
           ]
