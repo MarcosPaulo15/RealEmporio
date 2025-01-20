@@ -1,0 +1,101 @@
+﻿using EmporioRoyal.Model;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace EmporioRoyal.View
+{
+    public partial class UcRegistrarProduto : UserControl
+    {
+        public UcRegistrarProduto()
+        {
+            InitializeComponent();
+        }
+
+
+        private void txbCodigo_TextChanged(object sender, KeyPressEventArgs e)
+        {
+            // Verifica se a tecla pressionada não é um dígito e nem uma tecla de controle (como Backspace)
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Se o caractere não for um dígito ou controle, cancela o evento, ou seja, ignora a entrada
+                e.Handled = true;
+            }
+        }
+
+        private void txbCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Program.IntNumber(e);
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Certifique-se de que apenas números, vírgulas, pontos ou teclas de controle podem ser digitadas
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.' && !char.IsControl(e.KeyChar))
+            {
+                // Apenas um ponto ou vírgula decimal permitido
+                if ((e.KeyChar == '.' || e.KeyChar == ',') && (sender as TextBox).Text.Contains(".") || (sender as TextBox).Text.Contains(","))
+                {
+                    e.Handled = true;
+                }
+            }
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Program.IntNumber(e);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            InsereNovosProdutos();
+        }
+
+        public void InsereNovosProdutos()
+        {
+
+            MdProdutos mdProdutos = new MdProdutos();           
+
+            if(string.IsNullOrEmpty(txbCodigo.Text) || string.IsNullOrEmpty(txbNome.Text) || string.IsNullOrEmpty(txbDescricao.Text) ||
+                string.IsNullOrEmpty(txbQtd.Text) || string.IsNullOrEmpty(txbPreco.Text)){
+
+                MessageBox.Show("Todos os campos deve estar preenchidos, favor verificar!");
+            }
+            else
+            {
+                mdProdutos.Codigo = int.Parse(txbCodigo.Text);
+                mdProdutos.Nome = txbNome.Text;
+                mdProdutos.Descricao = txbDescricao.Text;
+                mdProdutos.Quantidade = int.Parse(txbQtd.Text);
+                mdProdutos.Valor = txbPreco.Text;
+
+                if (mdProdutos.insert())
+                {
+                    MessageBox.Show("Produto Inserido com sucesso!");
+                    txbCodigo.Clear();
+                    txbNome.Clear();
+                    txbDescricao.Clear();
+                    txbQtd.Clear();
+                    txbPreco.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Falha ao inserir produto, favor procure o administrador do sistema!");
+                }
+            }
+            
+        }
+    }
+}

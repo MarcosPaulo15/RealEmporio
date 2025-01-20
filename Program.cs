@@ -13,5 +13,12 @@ namespace EmporioRoyal
             ApplicationConfiguration.Initialize();
             Application.Run(new FoLogin());
         }
+
+        //Metodo responsavel para obrigatoriedade somente de numeros em textbox, Marcos.
+        public static void IntNumber(KeyPressEventArgs e)
+        {
+            if(!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+                e.Handled = true;
+        }
     }
 }

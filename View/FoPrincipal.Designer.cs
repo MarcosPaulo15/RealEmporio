@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FoPrincipal));
             panMenu = new Panel();
             menuStrip1 = new MenuStrip();
+            tlsInicio = new ToolStripMenuItem();
             clienteToolStripMenuItem = new ToolStripMenuItem();
             adicionarNovoClienteToolStripMenuItem = new ToolStripMenuItem();
             verClientesToolStripMenuItem = new ToolStripMenuItem();
@@ -65,17 +66,26 @@
             // 
             menuStrip1.BackColor = Color.Transparent;
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { clienteToolStripMenuItem, estoqueToolStripMenuItem, relatóriosToolStripMenuItem, vendaToolStripMenuItem, sairToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { tlsInicio, clienteToolStripMenuItem, estoqueToolStripMenuItem, relatóriosToolStripMenuItem, vendaToolStripMenuItem, sairToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1370, 46);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
+            // tlsInicio
+            // 
+            tlsInicio.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tlsInicio.Name = "tlsInicio";
+            tlsInicio.Size = new Size(101, 42);
+            tlsInicio.Text = "Inicio";
+            tlsInicio.Click += tlsInicio_Click;
+            // 
             // clienteToolStripMenuItem
             // 
             clienteToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { adicionarNovoClienteToolStripMenuItem, verClientesToolStripMenuItem });
             clienteToolStripMenuItem.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            clienteToolStripMenuItem.Margin = new Padding(105, 0, 0, 0);
             clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             clienteToolStripMenuItem.Size = new Size(120, 42);
             clienteToolStripMenuItem.Text = "Cliente";
@@ -98,7 +108,7 @@
             // 
             estoqueToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registrarProdutosToolStripMenuItem, entradaDeProdutosToolStripMenuItem });
             estoqueToolStripMenuItem.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            estoqueToolStripMenuItem.Margin = new Padding(165, 0, 0, 0);
+            estoqueToolStripMenuItem.Margin = new Padding(105, 0, 0, 0);
             estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
             estoqueToolStripMenuItem.Size = new Size(135, 42);
             estoqueToolStripMenuItem.Text = "Estoque";
@@ -106,20 +116,22 @@
             // registrarProdutosToolStripMenuItem
             // 
             registrarProdutosToolStripMenuItem.Name = "registrarProdutosToolStripMenuItem";
-            registrarProdutosToolStripMenuItem.Size = new Size(385, 46);
+            registrarProdutosToolStripMenuItem.Size = new Size(367, 46);
             registrarProdutosToolStripMenuItem.Text = "Registrar produtos";
+            registrarProdutosToolStripMenuItem.Click += registrarProdutosToolStripMenuItem_Click;
             // 
             // entradaDeProdutosToolStripMenuItem
             // 
             entradaDeProdutosToolStripMenuItem.Name = "entradaDeProdutosToolStripMenuItem";
-            entradaDeProdutosToolStripMenuItem.Size = new Size(385, 46);
-            entradaDeProdutosToolStripMenuItem.Text = "Entrada de Produtos";
+            entradaDeProdutosToolStripMenuItem.Size = new Size(367, 46);
+            entradaDeProdutosToolStripMenuItem.Text = "Visualizar Produtos";
+            entradaDeProdutosToolStripMenuItem.Click += entradaDeProdutosToolStripMenuItem_Click;
             // 
             // relatóriosToolStripMenuItem
             // 
             relatóriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { relatórioDeVendasToolStripMenuItem });
             relatóriosToolStripMenuItem.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            relatóriosToolStripMenuItem.Margin = new Padding(165, 0, 0, 0);
+            relatóriosToolStripMenuItem.Margin = new Padding(105, 0, 0, 0);
             relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
             relatóriosToolStripMenuItem.Size = new Size(159, 42);
             relatóriosToolStripMenuItem.Text = "Relatórios";
@@ -133,7 +145,7 @@
             // vendaToolStripMenuItem
             // 
             vendaToolStripMenuItem.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            vendaToolStripMenuItem.Margin = new Padding(165, 0, 0, 0);
+            vendaToolStripMenuItem.Margin = new Padding(105, 0, 0, 0);
             vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
             vendaToolStripMenuItem.Size = new Size(112, 42);
             vendaToolStripMenuItem.Text = "Venda";
@@ -141,10 +153,11 @@
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            sairToolStripMenuItem.Margin = new Padding(165, 0, 0, 0);
+            sairToolStripMenuItem.Margin = new Padding(105, 0, 0, 0);
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Size = new Size(80, 42);
             sairToolStripMenuItem.Text = "Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // PanCentral
             // 
@@ -218,5 +231,6 @@
         private Panel PanCentral;
         private Panel panUc;
         private PictureBox pcLogo;
+        private ToolStripMenuItem tlsInicio;
     }
 }

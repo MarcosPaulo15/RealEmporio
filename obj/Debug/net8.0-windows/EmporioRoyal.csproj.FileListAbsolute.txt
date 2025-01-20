@@ -105,3 +105,5 @@ C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.pdb
 C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.genruntimeconfig.cache
 C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\ref\EmporioRoyal.dll
 C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcVisualiza.resources
+C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcRegistrarProduto.resources
+C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcVisualizarProdutos.resources

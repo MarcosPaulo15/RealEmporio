@@ -10,7 +10,13 @@
     <Compile Update="View\UcNovoCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="View\UcRegistrarProduto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="View\UcVisualiza.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="View\UcVisualizarProdutos.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
