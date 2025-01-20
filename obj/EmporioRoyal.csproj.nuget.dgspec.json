@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\gitprojets\\RealEmporio\\EmporioRoyal.csproj": {}
+    "C:\\gitprojects\\RealEmporio\\EmporioRoyal.csproj": {}
   },
   "projects": {
-    "C:\\gitprojets\\RealEmporio\\EmporioRoyal.csproj": {
+    "C:\\gitprojects\\RealEmporio\\EmporioRoyal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\gitprojets\\RealEmporio\\EmporioRoyal.csproj",
+        "projectUniqueName": "C:\\gitprojects\\RealEmporio\\EmporioRoyal.csproj",
         "projectName": "EmporioRoyal",
-        "projectPath": "C:\\gitprojets\\RealEmporio\\EmporioRoyal.csproj",
-        "packagesPath": "C:\\Users\\Marcos\\.nuget\\packages\\",
-        "outputPath": "C:\\gitprojets\\RealEmporio\\obj\\",
+        "projectPath": "C:\\gitprojects\\RealEmporio\\EmporioRoyal.csproj",
+        "packagesPath": "C:\\Users\\marcos.machado.IAGED\\.nuget\\packages\\",
+        "outputPath": "C:\\gitprojects\\RealEmporio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Marcos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marcos.machado.IAGED\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -74,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -27,7 +27,7 @@ namespace EmporioRoyal
                 string sql = $"SELECT * FROM USUARIOS WHERE USUARIO = '{usuario}' AND SENHA = '{senha}'";
                 dt = BD.Consulta(sql);
 
-                if(dt.Rows.Count == 1)
+                if (dt.Rows.Count == 1)
                 {
                     FoPrincipal principal = new FoPrincipal();
 

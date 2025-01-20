@@ -29,5 +29,12 @@ namespace EmporioRoyal.View
             myControl.Dock = DockStyle.Fill;
             //spcLogo.Visible = false;
         }
+
+        private void verClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var myControl = new UcVisualiza();
+            pcLogo.Controls.Add(myControl);
+            myControl.Dock = DockStyle.Fill;
+        }
     }
 }

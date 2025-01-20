@@ -10,5 +10,8 @@
     <Compile Update="View\UcNovoCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="View\UcVisualiza.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
