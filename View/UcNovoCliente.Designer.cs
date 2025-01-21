@@ -72,6 +72,7 @@
             // 
             // lblNome
             // 
+            lblNome.Anchor = AnchorStyles.None;
             lblNome.AutoSize = true;
             lblNome.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNome.Location = new Point(604, 132);

@@ -74,5 +74,11 @@ namespace EmporioRoyal.View
         {
             FecharTodosUserControls();
         }
+
+        private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FoVendas foVendas = new FoVendas();
+            foVendas.ShowDialog();
+        }
     }
 }

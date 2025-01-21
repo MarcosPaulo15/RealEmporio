@@ -59,7 +59,7 @@
             panMenu.Dock = DockStyle.Top;
             panMenu.Location = new Point(0, 0);
             panMenu.Name = "panMenu";
-            panMenu.Size = new Size(1370, 52);
+            panMenu.Size = new Size(1370, 57);
             panMenu.TabIndex = 2;
             // 
             // menuStrip1
@@ -76,9 +76,12 @@
             // tlsInicio
             // 
             tlsInicio.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tlsInicio.ForeColor = Color.Black;
             tlsInicio.Name = "tlsInicio";
+            tlsInicio.RightToLeft = RightToLeft.No;
             tlsInicio.Size = new Size(101, 42);
             tlsInicio.Text = "Inicio";
+            tlsInicio.TextAlign = ContentAlignment.TopCenter;
             tlsInicio.Click += tlsInicio_Click;
             // 
             // clienteToolStripMenuItem
@@ -149,6 +152,7 @@
             vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
             vendaToolStripMenuItem.Size = new Size(112, 42);
             vendaToolStripMenuItem.Text = "Venda";
+            vendaToolStripMenuItem.Click += vendaToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
@@ -173,10 +177,10 @@
             // 
             panUc.Controls.Add(pcLogo);
             panUc.Dock = DockStyle.Fill;
-            panUc.Location = new Point(0, 52);
+            panUc.Location = new Point(0, 57);
             panUc.Margin = new Padding(4, 5, 4, 5);
             panUc.Name = "panUc";
-            panUc.Size = new Size(1370, 673);
+            panUc.Size = new Size(1370, 668);
             panUc.TabIndex = 3;
             // 
             // pcLogo
@@ -187,7 +191,7 @@
             pcLogo.Location = new Point(0, 0);
             pcLogo.Margin = new Padding(4, 5, 4, 5);
             pcLogo.Name = "pcLogo";
-            pcLogo.Size = new Size(1370, 673);
+            pcLogo.Size = new Size(1370, 668);
             pcLogo.TabIndex = 0;
             pcLogo.TabStop = false;
             // 
