@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FoVendas2));
             panTitulo = new Panel();
             lblTitle = new Label();
-            pcLogo = new PictureBox();
             panel2 = new Panel();
             panCentral = new Panel();
             panSubValues = new Panel();
@@ -61,25 +60,22 @@
             panel9 = new Panel();
             panel4 = new Panel();
             lblTotalItemVal = new Label();
-            label4 = new Label();
             label5 = new Label();
             panel5 = new Panel();
             panel6 = new Panel();
             label6 = new Label();
             lblValUnitarioVal = new Label();
-            label8 = new Label();
             panEspacamento5 = new Panel();
             PanCodigo = new Panel();
-            textBox1 = new TextBox();
+            txbCodigoBarras = new TextBox();
             lblCodigo = new Label();
             panel3 = new Panel();
             panel1 = new Panel();
             label1 = new Label();
-            label2 = new Label();
+            lblProduto = new Label();
             panLogo = new Panel();
             pictureBox1 = new PictureBox();
             panTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pcLogo).BeginInit();
             panCentral.SuspendLayout();
             panSubValues.SuspendLayout();
             panTroco.SuspendLayout();
@@ -104,7 +100,6 @@
             panTitulo.BackgroundImageLayout = ImageLayout.Zoom;
             panTitulo.BorderStyle = BorderStyle.Fixed3D;
             panTitulo.Controls.Add(lblTitle);
-            panTitulo.Controls.Add(pcLogo);
             panTitulo.Dock = DockStyle.Top;
             panTitulo.Location = new Point(0, 0);
             panTitulo.Name = "panTitulo";
@@ -116,22 +111,11 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(278, 0);
+            lblTitle.Location = new Point(562, 0);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(509, 65);
             lblTitle.TabIndex = 1;
             lblTitle.Text = "SISTEMA DE VENDAS";
-            // 
-            // pcLogo
-            // 
-            pcLogo.BackgroundImageLayout = ImageLayout.Zoom;
-            pcLogo.BorderStyle = BorderStyle.FixedSingle;
-            pcLogo.Dock = DockStyle.Left;
-            pcLogo.Location = new Point(0, 0);
-            pcLogo.Name = "pcLogo";
-            pcLogo.Size = new Size(185, 70);
-            pcLogo.TabIndex = 0;
-            pcLogo.TabStop = false;
             // 
             // panel2
             // 
@@ -424,7 +408,6 @@
             panel4.BackColor = Color.FromArgb(255, 192, 192);
             panel4.BorderStyle = BorderStyle.Fixed3D;
             panel4.Controls.Add(lblTotalItemVal);
-            panel4.Controls.Add(label4);
             panel4.Controls.Add(label5);
             panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(0, 267);
@@ -436,21 +419,11 @@
             // 
             lblTotalItemVal.AutoSize = true;
             lblTotalItemVal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalItemVal.Location = new Point(354, 63);
+            lblTotalItemVal.Location = new Point(285, 54);
             lblTotalItemVal.Name = "lblTotalItemVal";
             lblTotalItemVal.Size = new Size(63, 32);
             lblTotalItemVal.TabIndex = 2;
             lblTotalItemVal.Text = "0,00";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(285, 63);
-            label4.Name = "label4";
-            label4.Size = new Size(44, 32);
-            label4.TabIndex = 1;
-            label4.Text = "R$";
             // 
             // label5
             // 
@@ -476,7 +449,6 @@
             panel6.BorderStyle = BorderStyle.Fixed3D;
             panel6.Controls.Add(label6);
             panel6.Controls.Add(lblValUnitarioVal);
-            panel6.Controls.Add(label8);
             panel6.Dock = DockStyle.Top;
             panel6.Location = new Point(0, 125);
             panel6.Name = "panel6";
@@ -497,21 +469,11 @@
             // 
             lblValUnitarioVal.AutoSize = true;
             lblValUnitarioVal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblValUnitarioVal.Location = new Point(354, 62);
+            lblValUnitarioVal.Location = new Point(285, 67);
             lblValUnitarioVal.Name = "lblValUnitarioVal";
             lblValUnitarioVal.Size = new Size(63, 32);
             lblValUnitarioVal.TabIndex = 2;
             lblValUnitarioVal.Text = "0,00";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(285, 62);
-            label8.Name = "label8";
-            label8.Size = new Size(44, 32);
-            label8.TabIndex = 1;
-            label8.Text = "R$";
             // 
             // panEspacamento5
             // 
@@ -525,7 +487,7 @@
             // 
             PanCodigo.BackColor = Color.FromArgb(255, 192, 192);
             PanCodigo.BorderStyle = BorderStyle.Fixed3D;
-            PanCodigo.Controls.Add(textBox1);
+            PanCodigo.Controls.Add(txbCodigoBarras);
             PanCodigo.Controls.Add(lblCodigo);
             PanCodigo.Dock = DockStyle.Top;
             PanCodigo.Location = new Point(0, 0);
@@ -533,12 +495,14 @@
             PanCodigo.Size = new Size(449, 100);
             PanCodigo.TabIndex = 0;
             // 
-            // textBox1
+            // txbCodigoBarras
             // 
-            textBox1.Location = new Point(3, 42);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(440, 31);
-            textBox1.TabIndex = 1;
+            txbCodigoBarras.Location = new Point(3, 42);
+            txbCodigoBarras.Name = "txbCodigoBarras";
+            txbCodigoBarras.Size = new Size(440, 31);
+            txbCodigoBarras.TabIndex = 1;
+            txbCodigoBarras.KeyDown += textBox1_KeyDown;
+            txbCodigoBarras.KeyPress += textBox1_KeyPress;
             // 
             // lblCodigo
             // 
@@ -563,7 +527,7 @@
             panel1.BackColor = Color.FromArgb(255, 192, 192);
             panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(lblProduto);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -581,15 +545,15 @@
             label1.TabIndex = 1;
             label1.Text = "UN";
             // 
-            // label2
+            // lblProduto
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(80, 12);
-            label2.Name = "label2";
-            label2.Size = new Size(120, 38);
-            label2.TabIndex = 0;
-            label2.Text = "Produto";
+            lblProduto.AutoSize = true;
+            lblProduto.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblProduto.Location = new Point(80, 12);
+            lblProduto.Name = "lblProduto";
+            lblProduto.Size = new Size(120, 38);
+            lblProduto.TabIndex = 0;
+            lblProduto.Text = "Produto";
             // 
             // panLogo
             // 
@@ -627,7 +591,6 @@
             WindowState = FormWindowState.Maximized;
             panTitulo.ResumeLayout(false);
             panTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pcLogo).EndInit();
             panCentral.ResumeLayout(false);
             panSubValues.ResumeLayout(false);
             panSubValues.PerformLayout();
@@ -660,10 +623,9 @@
 
         private Panel panTitulo;
         private Label lblTitle;
-        private PictureBox pcLogo;
         private Panel panCentral;
         private Label label1;
-        private Label label2;
+        private Label lblProduto;
         private Panel panel2;
         private Panel panel1;
         private Panel panel3;
@@ -674,16 +636,14 @@
         private Panel panel9;
         private Panel panel4;
         private Label lblTotalItemVal;
-        private Label label4;
         private Label label5;
         private Panel panel5;
         private Panel panel6;
         private Label label6;
         private Label lblValUnitarioVal;
-        private Label label8;
         private Panel panEspacamento5;
         private Panel PanCodigo;
-        private TextBox textBox1;
+        private TextBox txbCodigoBarras;
         private Label lblCodigo;
         private Panel panLista;
         private Panel panel7;

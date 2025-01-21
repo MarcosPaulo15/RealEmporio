@@ -60,5 +60,14 @@ namespace EmporioRoyal.Model
             bool validaInsertProdutos = BD.Insert(query);
             return validaInsertProdutos;
         }
+
+        public DataTable ProcurarProduto(long id)
+        {
+
+            string sql = $"SELECT * FROM PRODUTOS WHERE CODIGO = {id}";
+            DataTable dt = BD.Consulta(sql);
+
+            return dt;
+        }
     }
 }
