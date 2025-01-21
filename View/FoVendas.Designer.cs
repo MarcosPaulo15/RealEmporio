@@ -35,7 +35,6 @@
             label3 = new Label();
             label1 = new Label();
             lblTotalTrocoTit = new Label();
-            panel8 = new Panel();
             panTotalRecebido = new Panel();
             lblValTotalRecebido = new Label();
             label10 = new Label();
@@ -52,11 +51,10 @@
             lblListaProdutos = new Label();
             panEspacamento8 = new Panel();
             panProdutos = new Panel();
-            panValores = new Panel();
             panCodigoLabel = new Panel();
             lblCodigoValores = new Label();
             LblCodigoLabel = new Label();
-            panEspacamento7 = new Panel();
+            panel9 = new Panel();
             panel2 = new Panel();
             lblTotalItemVal = new Label();
             label4 = new Label();
@@ -87,7 +85,6 @@
             ((System.ComponentModel.ISupportInitialize)dgvListaProdutos).BeginInit();
             PanListaProdutos.SuspendLayout();
             panProdutos.SuspendLayout();
-            panValores.SuspendLayout();
             panCodigoLabel.SuspendLayout();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
@@ -100,32 +97,32 @@
             // panCentral
             // 
             panCentral.BackColor = Color.FromArgb(255, 128, 128);
-            panCentral.Controls.Add(panTroco);
-            panCentral.Controls.Add(panel7);
-            panCentral.Controls.Add(panDivideSub);
-            panCentral.Controls.Add(panel5);
-            panCentral.Controls.Add(dgvListaProdutos);
             panCentral.Controls.Add(PanListaProdutos);
+            panCentral.Controls.Add(dgvListaProdutos);
+            panCentral.Controls.Add(panel5);
+            panCentral.Controls.Add(panDivideSub);
+            panCentral.Controls.Add(panel7);
+            panCentral.Controls.Add(panTroco);
             panCentral.Controls.Add(panEspacamento8);
             panCentral.Controls.Add(panProdutos);
             panCentral.Controls.Add(panEspaco2);
             panCentral.Controls.Add(panTituloProd);
             panCentral.Controls.Add(panel1);
             panCentral.Controls.Add(panBusca);
+            panCentral.Dock = DockStyle.Left;
             panCentral.Location = new Point(0, 0);
             panCentral.Name = "panCentral";
-            panCentral.Size = new Size(1591, 827);
+            panCentral.Size = new Size(1591, 892);
             panCentral.TabIndex = 0;
             // 
             // panTroco
             // 
             panTroco.Controls.Add(panTrocoLiq);
-            panTroco.Controls.Add(panel8);
             panTroco.Controls.Add(panTotalRecebido);
-            panTroco.Dock = DockStyle.Top;
-            panTroco.Location = new Point(494, 703);
+            panTroco.Dock = DockStyle.Bottom;
+            panTroco.Location = new Point(472, 768);
             panTroco.Name = "panTroco";
-            panTroco.Size = new Size(1097, 124);
+            panTroco.Size = new Size(1119, 124);
             panTroco.TabIndex = 12;
             // 
             // panTrocoLiq
@@ -136,16 +133,16 @@
             panTrocoLiq.Controls.Add(label1);
             panTrocoLiq.Controls.Add(lblTotalTrocoTit);
             panTrocoLiq.Dock = DockStyle.Right;
-            panTrocoLiq.Location = new Point(658, 0);
+            panTrocoLiq.Location = new Point(591, 0);
             panTrocoLiq.Name = "panTrocoLiq";
-            panTrocoLiq.Size = new Size(439, 124);
+            panTrocoLiq.Size = new Size(528, 124);
             panTrocoLiq.TabIndex = 2;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(319, 61);
+            label3.Location = new Point(408, 61);
             label3.Name = "label3";
             label3.Size = new Size(89, 38);
             label3.TabIndex = 2;
@@ -155,7 +152,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(250, 61);
+            label1.Location = new Point(319, 61);
             label1.Name = "label1";
             label1.Size = new Size(51, 38);
             label1.TabIndex = 1;
@@ -171,14 +168,6 @@
             lblTotalTrocoTit.TabIndex = 0;
             lblTotalTrocoTit.Text = "TROCO";
             // 
-            // panel8
-            // 
-            panel8.Dock = DockStyle.Left;
-            panel8.Location = new Point(360, 0);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(103, 124);
-            panel8.TabIndex = 1;
-            // 
             // panTotalRecebido
             // 
             panTotalRecebido.BackColor = Color.FromArgb(255, 192, 192);
@@ -189,7 +178,7 @@
             panTotalRecebido.Dock = DockStyle.Left;
             panTotalRecebido.Location = new Point(0, 0);
             panTotalRecebido.Name = "panTotalRecebido";
-            panTotalRecebido.Size = new Size(360, 124);
+            panTotalRecebido.Size = new Size(494, 124);
             panTotalRecebido.TabIndex = 0;
             // 
             // lblValTotalRecebido
@@ -224,20 +213,20 @@
             // 
             // panel7
             // 
-            panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(494, 688);
+            panel7.Dock = DockStyle.Bottom;
+            panel7.Location = new Point(472, 753);
             panel7.Name = "panel7";
-            panel7.Size = new Size(1097, 15);
+            panel7.Size = new Size(1119, 15);
             panel7.TabIndex = 11;
             // 
             // panDivideSub
             // 
             panDivideSub.Controls.Add(panel6);
             panDivideSub.Controls.Add(panSubValues);
-            panDivideSub.Dock = DockStyle.Top;
-            panDivideSub.Location = new Point(494, 538);
+            panDivideSub.Dock = DockStyle.Bottom;
+            panDivideSub.Location = new Point(472, 603);
             panDivideSub.Name = "panDivideSub";
-            panDivideSub.Size = new Size(1097, 150);
+            panDivideSub.Size = new Size(1119, 150);
             panDivideSub.TabIndex = 10;
             // 
             // panel6
@@ -255,7 +244,7 @@
             panSubValues.Controls.Add(lblSubTotalVal);
             panSubValues.Controls.Add(lblSubTotalTit);
             panSubValues.Dock = DockStyle.Right;
-            panSubValues.Location = new Point(475, 0);
+            panSubValues.Location = new Point(497, 0);
             panSubValues.Name = "panSubValues";
             panSubValues.Size = new Size(622, 150);
             panSubValues.TabIndex = 10;
@@ -282,10 +271,10 @@
             // 
             // panel5
             // 
-            panel5.Dock = DockStyle.Top;
-            panel5.Location = new Point(494, 524);
+            panel5.Dock = DockStyle.Bottom;
+            panel5.Location = new Point(472, 589);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1097, 14);
+            panel5.Size = new Size(1119, 14);
             panel5.TabIndex = 8;
             // 
             // dgvListaProdutos
@@ -293,11 +282,11 @@
             dgvListaProdutos.BackgroundColor = Color.White;
             dgvListaProdutos.BorderStyle = BorderStyle.Fixed3D;
             dgvListaProdutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvListaProdutos.Dock = DockStyle.Top;
-            dgvListaProdutos.Location = new Point(494, 241);
+            dgvListaProdutos.Dock = DockStyle.Bottom;
+            dgvListaProdutos.Location = new Point(472, 238);
             dgvListaProdutos.Name = "dgvListaProdutos";
             dgvListaProdutos.RowHeadersWidth = 62;
-            dgvListaProdutos.Size = new Size(1097, 283);
+            dgvListaProdutos.Size = new Size(1119, 351);
             dgvListaProdutos.TabIndex = 7;
             // 
             // PanListaProdutos
@@ -305,10 +294,10 @@
             PanListaProdutos.BackColor = Color.FromArgb(255, 192, 192);
             PanListaProdutos.BorderStyle = BorderStyle.Fixed3D;
             PanListaProdutos.Controls.Add(lblListaProdutos);
-            PanListaProdutos.Dock = DockStyle.Top;
-            PanListaProdutos.Location = new Point(494, 200);
+            PanListaProdutos.Dock = DockStyle.Bottom;
+            PanListaProdutos.Location = new Point(472, 197);
             PanListaProdutos.Name = "PanListaProdutos";
-            PanListaProdutos.Size = new Size(1097, 41);
+            PanListaProdutos.Size = new Size(1119, 41);
             PanListaProdutos.TabIndex = 6;
             // 
             // lblListaProdutos
@@ -324,34 +313,25 @@
             // panEspacamento8
             // 
             panEspacamento8.Dock = DockStyle.Left;
-            panEspacamento8.Location = new Point(454, 200);
+            panEspacamento8.Location = new Point(449, 200);
             panEspacamento8.Name = "panEspacamento8";
-            panEspacamento8.Size = new Size(40, 627);
+            panEspacamento8.Size = new Size(23, 692);
             panEspacamento8.TabIndex = 5;
             // 
             // panProdutos
             // 
-            panProdutos.Controls.Add(panValores);
+            panProdutos.Controls.Add(panCodigoLabel);
+            panProdutos.Controls.Add(panel9);
+            panProdutos.Controls.Add(panel2);
+            panProdutos.Controls.Add(panel3);
+            panProdutos.Controls.Add(panel4);
             panProdutos.Controls.Add(panEspacamento5);
             panProdutos.Controls.Add(PanCodigo);
             panProdutos.Dock = DockStyle.Left;
             panProdutos.Location = new Point(0, 200);
             panProdutos.Name = "panProdutos";
-            panProdutos.Size = new Size(454, 627);
+            panProdutos.Size = new Size(449, 692);
             panProdutos.TabIndex = 4;
-            // 
-            // panValores
-            // 
-            panValores.Controls.Add(panCodigoLabel);
-            panValores.Controls.Add(panEspacamento7);
-            panValores.Controls.Add(panel2);
-            panValores.Controls.Add(panel3);
-            panValores.Controls.Add(panel4);
-            panValores.Dock = DockStyle.Left;
-            panValores.Location = new Point(0, 125);
-            panValores.Name = "panValores";
-            panValores.Size = new Size(301, 502);
-            panValores.TabIndex = 5;
             // 
             // panCodigoLabel
             // 
@@ -360,9 +340,9 @@
             panCodigoLabel.Controls.Add(lblCodigoValores);
             panCodigoLabel.Controls.Add(LblCodigoLabel);
             panCodigoLabel.Dock = DockStyle.Top;
-            panCodigoLabel.Location = new Point(0, 288);
+            panCodigoLabel.Location = new Point(0, 410);
             panCodigoLabel.Name = "panCodigoLabel";
-            panCodigoLabel.Size = new Size(301, 150);
+            panCodigoLabel.Size = new Size(449, 150);
             panCodigoLabel.TabIndex = 10;
             // 
             // lblCodigoValores
@@ -385,13 +365,13 @@
             LblCodigoLabel.TabIndex = 0;
             LblCodigoLabel.Text = "CÓDIGO";
             // 
-            // panEspacamento7
+            // panel9
             // 
-            panEspacamento7.Dock = DockStyle.Top;
-            panEspacamento7.Location = new Point(0, 268);
-            panEspacamento7.Name = "panEspacamento7";
-            panEspacamento7.Size = new Size(301, 20);
-            panEspacamento7.TabIndex = 9;
+            panel9.Dock = DockStyle.Top;
+            panel9.Location = new Point(0, 392);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(449, 18);
+            panel9.TabIndex = 12;
             // 
             // panel2
             // 
@@ -401,9 +381,9 @@
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label5);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 143);
+            panel2.Location = new Point(0, 267);
             panel2.Name = "panel2";
-            panel2.Size = new Size(301, 125);
+            panel2.Size = new Size(449, 125);
             panel2.TabIndex = 8;
             // 
             // lblTotalItemVal
@@ -439,10 +419,10 @@
             // panel3
             // 
             panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 122);
+            panel3.Location = new Point(0, 247);
             panel3.Name = "panel3";
-            panel3.Size = new Size(301, 21);
-            panel3.TabIndex = 7;
+            panel3.Size = new Size(449, 20);
+            panel3.TabIndex = 11;
             // 
             // panel4
             // 
@@ -452,9 +432,9 @@
             panel4.Controls.Add(lblValUnitarioVal);
             panel4.Controls.Add(label8);
             panel4.Dock = DockStyle.Top;
-            panel4.Location = new Point(0, 0);
+            panel4.Location = new Point(0, 125);
             panel4.Name = "panel4";
-            panel4.Size = new Size(301, 122);
+            panel4.Size = new Size(449, 122);
             panel4.TabIndex = 6;
             // 
             // label6
@@ -471,7 +451,7 @@
             // 
             lblValUnitarioVal.AutoSize = true;
             lblValUnitarioVal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblValUnitarioVal.Location = new Point(215, 62);
+            lblValUnitarioVal.Location = new Point(354, 62);
             lblValUnitarioVal.Name = "lblValUnitarioVal";
             lblValUnitarioVal.Size = new Size(63, 32);
             lblValUnitarioVal.TabIndex = 2;
@@ -481,7 +461,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(152, 62);
+            label8.Location = new Point(285, 62);
             label8.Name = "label8";
             label8.Size = new Size(44, 32);
             label8.TabIndex = 1;
@@ -492,7 +472,7 @@
             panEspacamento5.Dock = DockStyle.Top;
             panEspacamento5.Location = new Point(0, 100);
             panEspacamento5.Name = "panEspacamento5";
-            panEspacamento5.Size = new Size(454, 25);
+            panEspacamento5.Size = new Size(449, 25);
             panEspacamento5.TabIndex = 5;
             // 
             // PanCodigo
@@ -504,7 +484,7 @@
             PanCodigo.Dock = DockStyle.Top;
             PanCodigo.Location = new Point(0, 0);
             PanCodigo.Name = "PanCodigo";
-            PanCodigo.Size = new Size(454, 100);
+            PanCodigo.Size = new Size(449, 100);
             PanCodigo.TabIndex = 0;
             // 
             // textBox1
@@ -549,7 +529,7 @@
             lblUnidade.AutoSize = true;
             lblUnidade.BackColor = Color.FromArgb(255, 192, 192);
             lblUnidade.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUnidade.Location = new Point(1235, 22);
+            lblUnidade.Location = new Point(923, 20);
             lblUnidade.Name = "lblUnidade";
             lblUnidade.Size = new Size(41, 28);
             lblUnidade.TabIndex = 1;
@@ -613,7 +593,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 128, 128);
-            ClientSize = new Size(1591, 827);
+            ClientSize = new Size(1742, 892);
             Controls.Add(panCentral);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
@@ -634,7 +614,6 @@
             PanListaProdutos.ResumeLayout(false);
             PanListaProdutos.PerformLayout();
             panProdutos.ResumeLayout(false);
-            panValores.ResumeLayout(false);
             panCodigoLabel.ResumeLayout(false);
             panCodigoLabel.PerformLayout();
             panel2.ResumeLayout(false);
@@ -662,25 +641,6 @@
         private Panel panel1;
         private Panel panEspaco2;
         private Label lblUnidade;
-        private Panel panProdutos;
-        private Panel PanCodigo;
-        private TextBox textBox1;
-        private Label lblCodigo;
-        private Panel panEspacamento5;
-        private Panel panValores;
-        private Panel panel2;
-        private Label lblTotalItemVal;
-        private Label label4;
-        private Label label5;
-        private Panel panel3;
-        private Panel panel4;
-        private Label label6;
-        private Label lblValUnitarioVal;
-        private Label label8;
-        private Panel panCodigoLabel;
-        private Label lblCodigoValores;
-        private Label LblCodigoLabel;
-        private Panel panEspacamento7;
         private Panel panel5;
         private DataGridView dgvListaProdutos;
         private Panel PanListaProdutos;
@@ -702,5 +662,23 @@
         private Label label3;
         private Label label1;
         private Label lblValTotalRecebido;
+        private Panel panProdutos;
+        private Panel panCodigoLabel;
+        private Label lblCodigoValores;
+        private Label LblCodigoLabel;
+        private Panel panel2;
+        private Label lblTotalItemVal;
+        private Label label4;
+        private Label label5;
+        private Panel panEspacamento5;
+        private Panel PanCodigo;
+        private TextBox textBox1;
+        private Label lblCodigo;
+        private Panel panel4;
+        private Label label6;
+        private Label lblValUnitarioVal;
+        private Label label8;
+        private Panel panel9;
+        private Panel panel3;
     }
 }

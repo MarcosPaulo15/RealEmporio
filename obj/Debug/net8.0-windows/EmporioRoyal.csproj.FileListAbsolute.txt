@@ -108,3 +108,4 @@ C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcVisualiz
 C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcRegistrarProduto.resources
 C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcVisualizarProdutos.resources
 C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoVendas.resources
+C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoVendas2.resources
