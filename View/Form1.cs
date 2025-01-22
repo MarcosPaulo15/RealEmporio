@@ -14,10 +14,16 @@ namespace EmporioRoyal
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            ValidaEntrada();
+        }
+
+        private void ValidaEntrada()
+        {
+
             string usuario = txbUser.Text;
             string senha = txbPassword.Text;
 
-            if(usuario == "" || usuario == "")
+            if (usuario == "" || usuario == "")
             {
 
                 MessageBox.Show("Favor preencher os campos de usuário e senha!");
@@ -29,15 +35,42 @@ namespace EmporioRoyal
 
                 if (dt.Rows.Count == 1)
                 {
-                    FoPrincipal principal = new FoPrincipal();
+                    bool perfil = dt.Rows[0]["PERFIL"].ToString() != "1" ? false : true;
 
-                    principal.Show();
-                    Hide();
+                    if (perfil)
+                    {
+                        FoPrincipal principal = new FoPrincipal();
+
+                        principal.Show();
+                        Hide();
+                    }
+                    else
+                    {
+                        FoPerfil foPerfil = new FoPerfil();
+                        foPerfil.Show();
+                        Hide();
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Usuario ou senha incorreto, favor digite novamente!");
                 }
+            }
+        }
+
+        private void txbUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ValidaEntrada();
+            }
+        }
+
+        private void txbPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ValidaEntrada();
             }
         }
     }

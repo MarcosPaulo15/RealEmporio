@@ -33,20 +33,11 @@
             lblTitle = new Label();
             panel2 = new Panel();
             panCentral = new Panel();
+            panel11 = new Panel();
+            panel10 = new Panel();
             panSubValues = new Panel();
             lblSubTotalVal = new Label();
             lblSubTotalTit = new Label();
-            panel10 = new Panel();
-            panTroco = new Panel();
-            panTrocoLiq = new Panel();
-            label3 = new Label();
-            label7 = new Label();
-            lblTotalTrocoTit = new Label();
-            panTotalRecebido = new Panel();
-            lblValTotalRecebido = new Label();
-            label10 = new Label();
-            lblTitTotalRecebido = new Label();
-            panel11 = new Panel();
             panel8 = new Panel();
             panLista = new Panel();
             dgvListaProdutos = new DataGridView();
@@ -75,12 +66,13 @@
             lblProduto = new Label();
             panLogo = new Panel();
             pictureBox1 = new PictureBox();
+            lblCredito = new Label();
+            lblDebito = new Label();
+            lblPix = new Label();
+            lblDinheiro = new Label();
             panTitulo.SuspendLayout();
             panCentral.SuspendLayout();
             panSubValues.SuspendLayout();
-            panTroco.SuspendLayout();
-            panTrocoLiq.SuspendLayout();
-            panTotalRecebido.SuspendLayout();
             panLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvListaProdutos).BeginInit();
             PanListaProdutos.SuspendLayout();
@@ -128,10 +120,9 @@
             // panCentral
             // 
             panCentral.BorderStyle = BorderStyle.FixedSingle;
-            panCentral.Controls.Add(panSubValues);
-            panCentral.Controls.Add(panel10);
-            panCentral.Controls.Add(panTroco);
             panCentral.Controls.Add(panel11);
+            panCentral.Controls.Add(panel10);
+            panCentral.Controls.Add(panSubValues);
             panCentral.Controls.Add(panel8);
             panCentral.Controls.Add(panLista);
             panCentral.Controls.Add(panel7);
@@ -141,8 +132,24 @@
             panCentral.Dock = DockStyle.Left;
             panCentral.Location = new Point(0, 106);
             panCentral.Name = "panCentral";
-            panCentral.Size = new Size(1163, 759);
+            panCentral.Size = new Size(1163, 833);
             panCentral.TabIndex = 4;
+            // 
+            // panel11
+            // 
+            panel11.Dock = DockStyle.Bottom;
+            panel11.Location = new Point(503, 685);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(658, 146);
+            panel11.TabIndex = 13;
+            // 
+            // panel10
+            // 
+            panel10.Dock = DockStyle.Top;
+            panel10.Location = new Point(503, 567);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(658, 15);
+            panel10.TabIndex = 12;
             // 
             // panSubValues
             // 
@@ -150,8 +157,8 @@
             panSubValues.BorderStyle = BorderStyle.Fixed3D;
             panSubValues.Controls.Add(lblSubTotalVal);
             panSubValues.Controls.Add(lblSubTotalTit);
-            panSubValues.Dock = DockStyle.Bottom;
-            panSubValues.Location = new Point(503, 439);
+            panSubValues.Dock = DockStyle.Top;
+            panSubValues.Location = new Point(503, 433);
             panSubValues.Name = "panSubValues";
             panSubValues.Size = new Size(658, 134);
             panSubValues.TabIndex = 11;
@@ -175,118 +182,6 @@
             lblSubTotalTit.Size = new Size(241, 60);
             lblSubTotalTit.TabIndex = 0;
             lblSubTotalTit.Text = "SUBTOTAL";
-            // 
-            // panel10
-            // 
-            panel10.Dock = DockStyle.Bottom;
-            panel10.Location = new Point(503, 573);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(658, 15);
-            panel10.TabIndex = 12;
-            // 
-            // panTroco
-            // 
-            panTroco.Controls.Add(panTrocoLiq);
-            panTroco.Controls.Add(panTotalRecebido);
-            panTroco.Dock = DockStyle.Bottom;
-            panTroco.Location = new Point(503, 588);
-            panTroco.Name = "panTroco";
-            panTroco.Size = new Size(658, 124);
-            panTroco.TabIndex = 13;
-            // 
-            // panTrocoLiq
-            // 
-            panTrocoLiq.BackColor = Color.FromArgb(255, 192, 192);
-            panTrocoLiq.BorderStyle = BorderStyle.Fixed3D;
-            panTrocoLiq.Controls.Add(label3);
-            panTrocoLiq.Controls.Add(label7);
-            panTrocoLiq.Controls.Add(lblTotalTrocoTit);
-            panTrocoLiq.Dock = DockStyle.Right;
-            panTrocoLiq.Location = new Point(340, 0);
-            panTrocoLiq.Name = "panTrocoLiq";
-            panTrocoLiq.Size = new Size(318, 124);
-            panTrocoLiq.TabIndex = 2;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(205, 61);
-            label3.Name = "label3";
-            label3.Size = new Size(89, 38);
-            label3.TabIndex = 2;
-            label3.Text = "00,00";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(148, 61);
-            label7.Name = "label7";
-            label7.Size = new Size(51, 38);
-            label7.TabIndex = 1;
-            label7.Text = "R$";
-            // 
-            // lblTotalTrocoTit
-            // 
-            lblTotalTrocoTit.AutoSize = true;
-            lblTotalTrocoTit.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalTrocoTit.Location = new Point(3, 1);
-            lblTotalTrocoTit.Name = "lblTotalTrocoTit";
-            lblTotalTrocoTit.Size = new Size(110, 38);
-            lblTotalTrocoTit.TabIndex = 0;
-            lblTotalTrocoTit.Text = "TROCO";
-            // 
-            // panTotalRecebido
-            // 
-            panTotalRecebido.BackColor = Color.FromArgb(255, 192, 192);
-            panTotalRecebido.BorderStyle = BorderStyle.Fixed3D;
-            panTotalRecebido.Controls.Add(lblValTotalRecebido);
-            panTotalRecebido.Controls.Add(label10);
-            panTotalRecebido.Controls.Add(lblTitTotalRecebido);
-            panTotalRecebido.Dock = DockStyle.Left;
-            panTotalRecebido.Location = new Point(0, 0);
-            panTotalRecebido.Name = "panTotalRecebido";
-            panTotalRecebido.Size = new Size(295, 124);
-            panTotalRecebido.TabIndex = 0;
-            // 
-            // lblValTotalRecebido
-            // 
-            lblValTotalRecebido.AutoSize = true;
-            lblValTotalRecebido.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblValTotalRecebido.Location = new Point(196, 61);
-            lblValTotalRecebido.Name = "lblValTotalRecebido";
-            lblValTotalRecebido.Size = new Size(89, 38);
-            lblValTotalRecebido.TabIndex = 2;
-            lblValTotalRecebido.Text = "00,00";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(139, 61);
-            label10.Name = "label10";
-            label10.Size = new Size(51, 38);
-            label10.TabIndex = 1;
-            label10.Text = "R$";
-            // 
-            // lblTitTotalRecebido
-            // 
-            lblTitTotalRecebido.AutoSize = true;
-            lblTitTotalRecebido.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitTotalRecebido.Location = new Point(-2, -2);
-            lblTitTotalRecebido.Name = "lblTitTotalRecebido";
-            lblTitTotalRecebido.Size = new Size(242, 38);
-            lblTitTotalRecebido.TabIndex = 0;
-            lblTitTotalRecebido.Text = "TOTAL RECEBIDO";
-            // 
-            // panel11
-            // 
-            panel11.Dock = DockStyle.Bottom;
-            panel11.Location = new Point(503, 712);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(658, 45);
-            panel11.TabIndex = 14;
             // 
             // panel8
             // 
@@ -345,11 +240,15 @@
             panel7.Dock = DockStyle.Left;
             panel7.Location = new Point(449, 92);
             panel7.Name = "panel7";
-            panel7.Size = new Size(54, 665);
+            panel7.Size = new Size(54, 739);
             panel7.TabIndex = 8;
             // 
             // panProdutos
             // 
+            panProdutos.Controls.Add(lblDinheiro);
+            panProdutos.Controls.Add(lblPix);
+            panProdutos.Controls.Add(lblDebito);
+            panProdutos.Controls.Add(lblCredito);
             panProdutos.Controls.Add(panCodigoLabel);
             panProdutos.Controls.Add(panel9);
             panProdutos.Controls.Add(panel4);
@@ -360,7 +259,7 @@
             panProdutos.Dock = DockStyle.Left;
             panProdutos.Location = new Point(0, 92);
             panProdutos.Name = "panProdutos";
-            panProdutos.Size = new Size(449, 665);
+            panProdutos.Size = new Size(449, 739);
             panProdutos.TabIndex = 6;
             // 
             // panCodigoLabel
@@ -561,7 +460,7 @@
             panLogo.Dock = DockStyle.Fill;
             panLogo.Location = new Point(1163, 106);
             panLogo.Name = "panLogo";
-            panLogo.Size = new Size(522, 759);
+            panLogo.Size = new Size(522, 833);
             panLogo.TabIndex = 5;
             // 
             // pictureBox1
@@ -571,16 +470,56 @@
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(522, 759);
+            pictureBox1.Size = new Size(522, 833);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            // 
+            // lblCredito
+            // 
+            lblCredito.AutoSize = true;
+            lblCredito.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCredito.Location = new Point(11, 565);
+            lblCredito.Name = "lblCredito";
+            lblCredito.Size = new Size(265, 25);
+            lblCredito.TabIndex = 13;
+            lblCredito.Text = "F1 - PAGAMENTO NO CRÉDITO";
+            // 
+            // lblDebito
+            // 
+            lblDebito.AutoSize = true;
+            lblDebito.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDebito.Location = new Point(11, 605);
+            lblDebito.Name = "lblDebito";
+            lblDebito.Size = new Size(257, 25);
+            lblDebito.TabIndex = 14;
+            lblDebito.Text = "F2 - PAGAMENTO NO DÉBITO";
+            // 
+            // lblPix
+            // 
+            lblPix.AutoSize = true;
+            lblPix.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPix.Location = new Point(11, 642);
+            lblPix.Name = "lblPix";
+            lblPix.Size = new Size(223, 25);
+            lblPix.TabIndex = 15;
+            lblPix.Text = "F3 - PAGAMENTO NO PIX";
+            // 
+            // lblDinheiro
+            // 
+            lblDinheiro.AutoSize = true;
+            lblDinheiro.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDinheiro.Location = new Point(11, 681);
+            lblDinheiro.Name = "lblDinheiro";
+            lblDinheiro.Size = new Size(278, 25);
+            lblDinheiro.TabIndex = 16;
+            lblDinheiro.Text = "F4 - PAGAMENTO EM DINHEIRO";
             // 
             // FoVendas2
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 128, 128);
-            ClientSize = new Size(1685, 865);
+            ClientSize = new Size(1685, 939);
             Controls.Add(panLogo);
             Controls.Add(panCentral);
             Controls.Add(panel2);
@@ -594,16 +533,12 @@
             panCentral.ResumeLayout(false);
             panSubValues.ResumeLayout(false);
             panSubValues.PerformLayout();
-            panTroco.ResumeLayout(false);
-            panTrocoLiq.ResumeLayout(false);
-            panTrocoLiq.PerformLayout();
-            panTotalRecebido.ResumeLayout(false);
-            panTotalRecebido.PerformLayout();
             panLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvListaProdutos).EndInit();
             PanListaProdutos.ResumeLayout(false);
             PanListaProdutos.PerformLayout();
             panProdutos.ResumeLayout(false);
+            panProdutos.PerformLayout();
             panCodigoLabel.ResumeLayout(false);
             panCodigoLabel.PerformLayout();
             panel4.ResumeLayout(false);
@@ -664,8 +599,12 @@
         private Label lblValTotalRecebido;
         private Label label10;
         private Label lblTitTotalRecebido;
-        private Panel panel11;
         private Panel panLogo;
         private PictureBox pictureBox1;
+        private Panel panel11;
+        private Label lblPix;
+        private Label lblDebito;
+        private Label lblCredito;
+        private Label lblDinheiro;
     }
 }

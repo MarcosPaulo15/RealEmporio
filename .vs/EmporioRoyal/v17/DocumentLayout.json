@@ -1,12 +1,103 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\gitprojects\\RealEmporio\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "View\\Form1.Designer.cs",
+              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\Form1.Designer.cs",
+              "RelativeToolTip": "View\\Form1.Designer.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAuwEEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T20:12:41.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\Form2.cs",
+              "RelativeDocumentMoniker": "View\\Form2.cs",
+              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\Form2.cs",
+              "RelativeToolTip": "View\\Form2.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAkwDQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T20:02:58.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form2.cs [Projeto]",
+              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\Form2.cs",
+              "RelativeDocumentMoniker": "View\\Form2.cs",
+              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\Form2.cs [Projeto]",
+              "RelativeToolTip": "View\\Form2.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T20:02:56.574Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\Form1.cs",
+              "RelativeDocumentMoniker": "View\\Form1.cs",
+              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\Form1.cs",
+              "RelativeToolTip": "View\\Form1.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwBAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T20:02:31.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Projeto]",
+              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\Form1.cs",
+              "RelativeDocumentMoniker": "View\\Form1.cs",
+              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\Form1.cs [Projeto]",
+              "RelativeToolTip": "View\\Form1.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T20:02:29.67Z",
+              "EditorCaption": " [Projeto]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -84,6 +84,7 @@
             txbPassword.PasswordChar = '*';
             txbPassword.Size = new Size(276, 37);
             txbPassword.TabIndex = 3;
+            txbPassword.KeyDown += txbPassword_KeyDown;
             // 
             // lblPassword
             // 
@@ -102,6 +103,7 @@
             txbUser.Name = "txbUser";
             txbUser.Size = new Size(276, 37);
             txbUser.TabIndex = 1;
+            txbUser.KeyDown += txbUser_KeyDown;
             // 
             // lblLogin
             // 

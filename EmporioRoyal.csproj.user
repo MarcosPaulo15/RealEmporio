@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="View\FoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\FoPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\FoPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -17,6 +23,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="View\UcRegistrarProduto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="View\UcTroco.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="View\UcVisualiza.cs">
