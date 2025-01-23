@@ -32,7 +32,9 @@
             panCentral = new Panel();
             pcLogo = new PictureBox();
             panLegendas = new Panel();
+            lblUsuario = new Label();
             lblNovaCompra = new Label();
+            lblFechamento = new Label();
             panCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcLogo).BeginInit();
             panLegendas.SuspendLayout();
@@ -53,20 +55,33 @@
             pcLogo.BackgroundImage = (Image)resources.GetObject("pcLogo.BackgroundImage");
             pcLogo.BackgroundImageLayout = ImageLayout.Stretch;
             pcLogo.Dock = DockStyle.Fill;
-            pcLogo.Location = new Point(0, 68);
+            pcLogo.Location = new Point(0, 111);
             pcLogo.Name = "pcLogo";
-            pcLogo.Size = new Size(1311, 592);
+            pcLogo.Size = new Size(1311, 549);
             pcLogo.TabIndex = 1;
             pcLogo.TabStop = false;
             // 
             // panLegendas
             // 
+            panLegendas.Controls.Add(lblFechamento);
+            panLegendas.Controls.Add(lblUsuario);
             panLegendas.Controls.Add(lblNovaCompra);
             panLegendas.Dock = DockStyle.Top;
             panLegendas.Location = new Point(0, 0);
             panLegendas.Name = "panLegendas";
-            panLegendas.Size = new Size(1311, 68);
+            panLegendas.Size = new Size(1311, 111);
             panLegendas.TabIndex = 0;
+            // 
+            // lblUsuario
+            // 
+            lblUsuario.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblUsuario.AutoSize = true;
+            lblUsuario.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUsuario.Location = new Point(1214, 10);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(76, 32);
+            lblUsuario.TabIndex = 1;
+            lblUsuario.Text = "label1";
             // 
             // lblNovaCompra
             // 
@@ -77,6 +92,16 @@
             lblNovaCompra.Size = new Size(283, 32);
             lblNovaCompra.TabIndex = 0;
             lblNovaCompra.Text = "F1 - TELA DE COMPRAS";
+            // 
+            // lblFechamento
+            // 
+            lblFechamento.AutoSize = true;
+            lblFechamento.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblFechamento.Location = new Point(12, 64);
+            lblFechamento.Name = "lblFechamento";
+            lblFechamento.Size = new Size(357, 32);
+            lblFechamento.TabIndex = 2;
+            lblFechamento.Text = "F12 - FECHAMENTO DE CAIXA";
             // 
             // FoPerfil
             // 
@@ -105,5 +130,7 @@
         private PictureBox pcLogo;
         private Panel panLegendas;
         private Label lblNovaCompra;
+        private Label lblUsuario;
+        private Label lblFechamento;
     }
 }

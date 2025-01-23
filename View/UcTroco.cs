@@ -14,10 +14,12 @@ namespace EmporioRoyal.View
     public partial class UcTroco : UserControl
     {
         int idMax;
-        public UcTroco(int id)
+        int userId;
+        public UcTroco(int id, int idUser)
         {
             InitializeComponent();
             this.idMax = id;
+            userId = idUser;
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
@@ -46,7 +48,7 @@ namespace EmporioRoyal.View
                 {                    
                     //FoVendas2 foVendas2 = new FoVendas2(true);
                     MessageBox.Show("Compra tipo Dinheiro Concluida com sucesso!");
-                    if(mdProdutos.InsereTipoVenda(idMax, '4'))
+                    if(mdProdutos.InsereTipoVenda(idMax, '4', userId, '0', '0'))
                     {
                         Form parentForm = this.FindForm();
                         if (parentForm != null)

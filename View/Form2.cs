@@ -14,17 +14,20 @@ namespace EmporioRoyal.View
     public partial class FoVendas2 : Form
     {
         int idMax;
+        string nome = string.Empty;
+        int usuarioID;
         public FoVendas2()
         {
             InitializeComponent();
             //Initialize();
         }
 
-        public FoVendas2(int id)
+        public FoVendas2(int id, int idUsuario)
         {
             InitializeComponent();
             //Initialize(id);
             idMax = id;
+            usuarioID = idUsuario;
         }
 
         public FoVendas2(bool fecha)
@@ -70,7 +73,7 @@ namespace EmporioRoyal.View
                         lblValUnitarioVal.Text = "R$ " + valor;
                         lblCodigoValores.Text = codigoBarras;
 
-                        if (produto.InserirProdutosVendas(idMax, codigo))
+                        if (produto.InserirProdutosVendas(idMax, codigo, usuarioID))
                         {
                             if (produto.CarregaListaVendas(idMax).Rows.Count > 0)
                             {
@@ -89,6 +92,9 @@ namespace EmporioRoyal.View
 
 
                         }
+                    } else
+                    {
+                        MessageBox.Show("CODIGO DE BARRAS INVALIDO, FAVOR DIGITE UM CODIGO VALIDO");
                     }
                 }
 
@@ -96,7 +102,7 @@ namespace EmporioRoyal.View
             if (e.KeyCode == Keys.F1)
             {
 
-                if (mdProdutos.InsereTipoVenda(idMax, '1'))
+                if (mdProdutos.InsereTipoVenda(idMax, '1', usuarioID, '0', '0'))
                 {
                     MessageBox.Show("Compra tipo crédito Concluida com sucesso!");
                     Form parentForm = this.FindForm();
@@ -115,7 +121,7 @@ namespace EmporioRoyal.View
             else if (e.KeyCode == Keys.F2)
             {
 
-                if (mdProdutos.InsereTipoVenda(idMax, '2'))
+                if (mdProdutos.InsereTipoVenda(idMax, '2', usuarioID, '0', '0'))
                 {
                     MessageBox.Show("Compra tipo Débito Concluida com sucesso!");
                     Form parentForm = this.FindForm();
@@ -135,7 +141,7 @@ namespace EmporioRoyal.View
             else if (e.KeyCode == Keys.F3)
             {
 
-                if (mdProdutos.InsereTipoVenda(idMax, '3'))
+                if (mdProdutos.InsereTipoVenda(idMax, '3', usuarioID, '0', '0'))
                 {
                     MessageBox.Show("Compra tipo Pix Concluida com sucesso!");
                     Form parentForm = this.FindForm();
@@ -154,7 +160,7 @@ namespace EmporioRoyal.View
 
             if (e.KeyCode == Keys.F4)
             {
-                var myControl = new UcTroco(idMax);
+                var myControl = new UcTroco(idMax, usuarioID);
                 panel11.Controls.Add(myControl);
                 myControl.Dock = DockStyle.Fill;
             }

@@ -44,7 +44,9 @@
             sairToolStripMenuItem = new ToolStripMenuItem();
             PanCentral = new Panel();
             panUc = new Panel();
+            lblUsuario = new Label();
             pcLogo = new PictureBox();
+            tlsAprovaFechamento = new ToolStripMenuItem();
             panMenu.SuspendLayout();
             menuStrip1.SuspendLayout();
             PanCentral.SuspendLayout();
@@ -59,17 +61,17 @@
             panMenu.Dock = DockStyle.Top;
             panMenu.Location = new Point(0, 0);
             panMenu.Name = "panMenu";
-            panMenu.Size = new Size(1370, 57);
+            panMenu.Size = new Size(1717, 57);
             panMenu.TabIndex = 2;
             // 
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.Transparent;
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { tlsInicio, clienteToolStripMenuItem, estoqueToolStripMenuItem, relatóriosToolStripMenuItem, vendaToolStripMenuItem, sairToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { tlsInicio, clienteToolStripMenuItem, estoqueToolStripMenuItem, relatóriosToolStripMenuItem, vendaToolStripMenuItem, tlsAprovaFechamento, sairToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1370, 46);
+            menuStrip1.Size = new Size(1717, 46);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -170,18 +172,30 @@
             PanCentral.Dock = DockStyle.Fill;
             PanCentral.Location = new Point(0, 0);
             PanCentral.Name = "PanCentral";
-            PanCentral.Size = new Size(1370, 725);
+            PanCentral.Size = new Size(1717, 725);
             PanCentral.TabIndex = 0;
             // 
             // panUc
             // 
+            panUc.Controls.Add(lblUsuario);
             panUc.Controls.Add(pcLogo);
             panUc.Dock = DockStyle.Fill;
             panUc.Location = new Point(0, 57);
             panUc.Margin = new Padding(4, 5, 4, 5);
             panUc.Name = "panUc";
-            panUc.Size = new Size(1370, 668);
+            panUc.Size = new Size(1717, 668);
             panUc.TabIndex = 3;
+            // 
+            // lblUsuario
+            // 
+            lblUsuario.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblUsuario.AutoSize = true;
+            lblUsuario.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUsuario.Location = new Point(1634, 21);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(63, 28);
+            lblUsuario.TabIndex = 0;
+            lblUsuario.Text = "label1";
             // 
             // pcLogo
             // 
@@ -191,16 +205,25 @@
             pcLogo.Location = new Point(0, 0);
             pcLogo.Margin = new Padding(4, 5, 4, 5);
             pcLogo.Name = "pcLogo";
-            pcLogo.Size = new Size(1370, 668);
+            pcLogo.Size = new Size(1717, 668);
             pcLogo.TabIndex = 0;
             pcLogo.TabStop = false;
+            // 
+            // tlsAprovaFechamento
+            // 
+            tlsAprovaFechamento.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tlsAprovaFechamento.Margin = new Padding(105, 0, 0, 0);
+            tlsAprovaFechamento.Name = "tlsAprovaFechamento";
+            tlsAprovaFechamento.Size = new Size(299, 42);
+            tlsAprovaFechamento.Text = "Aprovar Fechamento";
+            tlsAprovaFechamento.Click += tlsAprovaFechamento_Click;
             // 
             // FoPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 128, 128);
-            ClientSize = new Size(1370, 725);
+            ClientSize = new Size(1717, 725);
             Controls.Add(PanCentral);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
@@ -214,6 +237,7 @@
             menuStrip1.PerformLayout();
             PanCentral.ResumeLayout(false);
             panUc.ResumeLayout(false);
+            panUc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pcLogo).EndInit();
             ResumeLayout(false);
         }
@@ -236,5 +260,7 @@
         private Panel panUc;
         private PictureBox pcLogo;
         private ToolStripMenuItem tlsInicio;
+        private Label lblUsuario;
+        private ToolStripMenuItem tlsAprovaFechamento;
     }
 }

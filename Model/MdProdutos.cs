@@ -81,12 +81,12 @@ namespace EmporioRoyal.Model
             return dt;
         }
 
-        public bool InserirProdutosVendas(int idMax, long idProd)
+        public bool InserirProdutosVendas(int idMax, long idProd, int idUsuario)
         {
             DateTime dataAtual = DateTime.Today;
             string sql = $"INSERT INTO VENDAS SELECT {idMax} AS CODIGO," +
                 $"CODIGO AS ID_PRODUTO, VALOR AS VALOR, " +
-                $"'{dataAtual}' AS DATA FROM PRODUTOS WHERE ID_PRODUTO = {idProd} ";
+                $"'{dataAtual}' AS DATA, {idUsuario} AS ID_USER FROM PRODUTOS WHERE ID_PRODUTO = {idProd} ";
 
             bool insert = BD.Insert(sql);
 
@@ -111,18 +111,50 @@ namespace EmporioRoyal.Model
             return dt;
         }
 
-        public bool InsereTipoVenda(int id, char tipo_entrada)
+        public bool InsereTipoVenda(int id, char tipo_entrada, int id_user, char fechamentoCaixa, char aprovaFechamento)
         {
             DateTime dataAtual = DateTime.Today;
+            string data = dataAtual.ToString("yyyy-MM-dd");
             string sql = $"INSERT INTO REL_TIPO_ENTRADA_CAIXA " +
                 $"SELECT NULL AS CODIGO, " +
-                $"'{dataAtual}' AS DATA, " +
+                $"'{data}' AS DATA, " +
                 $"'{tipo_entrada}' AS TIPO_ENTRADA, " +
                 $"SUM(VALOR) AS VALOR_TOTAL, " +
-                $"CODIGO AS ID_VENDA FROM VENDAS WHERE CODIGO = {id} ";
+                $"CODIGO AS ID_VENDA," +
+                $"{id_user} AS ID_USER, " +
+                $"'{fechamentoCaixa}' AS FECHAMENTO_CAIXA, " +
+                $"'{aprovaFechamento}' AS APROVA_FECHAMENTO FROM VENDAS WHERE CODIGO = {id} ";
 
             return BD.Insert(sql); 
         }
-        
+
+        public bool SolicitaFechamentoCaixa(int idUsuario)
+        {
+            DateTime dateTime = DateTime.Today;
+            string data = dateTime.ToString("yyyy-MM-dd");
+            string sql = $"UPDATE REL_TIPO_ENTRADA_CAIXA SET FECHAMENTO_CAIXA = '1' WHERE ID_USER = {idUsuario} AND DATA = '{data}'";
+            return BD.Update(sql);
+        }
+
+        public DataTable CarregaListaFechamento(int codigoUsu)
+        {
+            string query = "SELECT RTE.ID_USER AS CODIGO_USUARIO, USU.NOME, " +
+                "DATE(RTE.DATA) AS DATA, " +
+                "SUM(RTE.VALOR_TOTAL) AS TOTAL " +
+                "FROM REL_TIPO_ENTRADA_CAIXA RTE " +
+                "LEFT JOIN USUARIOS USU ON RTE.ID_USER = USU.ID " +
+                "WHERE FECHAMENTO_CAIXA = '1'" +
+                "  AND APROVA_FECHAMENTO = '0'" +
+                "GROUP BY USU.NOME, DATE(RTE.DATA)";
+            
+            dt = BD.Consulta(query);
+            return dt;
+        }
+
+        public bool AprovaFechamento(int idUsu)
+        {
+            string query = $"UPDATE REL_TIPO_ENTRADA_CAIXA SET APROVA_FECHAMENTO = '1' WHERE ID_USER = {idUsu}";
+            return BD.Update(query);
+        }
     }
 }

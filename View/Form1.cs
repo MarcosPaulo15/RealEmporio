@@ -36,17 +36,20 @@ namespace EmporioRoyal
                 if (dt.Rows.Count == 1)
                 {
                     bool perfil = dt.Rows[0]["PERFIL"].ToString() != "1" ? false : true;
+                    string nome = dt.Rows[0]["NOME"].ToString();
+                    string codigoUsu = dt.Rows[0]["ID"].ToString();
+                    int idUser = int.Parse(codigoUsu);
 
                     if (perfil)
                     {
-                        FoPrincipal principal = new FoPrincipal();
+                        FoPrincipal principal = new FoPrincipal(nome, idUser);
 
                         principal.Show();
                         Hide();
                     }
                     else
                     {
-                        FoPerfil foPerfil = new FoPerfil();
+                        FoPerfil foPerfil = new FoPerfil(nome, idUser);
                         foPerfil.Show();
                         Hide();
                     }
