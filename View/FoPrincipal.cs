@@ -99,5 +99,12 @@ namespace EmporioRoyal.View
             aprova.TopMost = true;
             aprova.Show();
         }
+
+        private void relatórioDeVendasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var myControl = new UcRelVendas();
+            pcLogo.Controls.Add(myControl);
+            myControl.Dock = DockStyle.Fill;
+        }
     }
 }

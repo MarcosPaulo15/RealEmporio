@@ -156,5 +156,38 @@ namespace EmporioRoyal.Model
             string query = $"UPDATE REL_TIPO_ENTRADA_CAIXA SET APROVA_FECHAMENTO = '1' WHERE ID_USER = {idUsu}";
             return BD.Update(query);
         }
+
+        /*public DataTable CarregaListaRelatorioVenda(string data)
+        {
+            string sql = "SELECT * FROM ";
+            DataTable dt = new DataTable();
+        }*/
+
+
+        public DataTable ListaCompletaVendas()
+        {
+            string sql = "SELECT RTE.DATA, " +
+                "TE.NOME AS TIPO_PAGAMENTO, " +
+                "RTE.VALOR_TOTAL AS TOTAL  " +
+                "FROM REL_TIPO_ENTRADA_CAIXA  RTE " +
+                "LEFT JOIN TIPO_ENTRADA TE ON TE.CODIGO = RTE.TIPO_ENTRADA ";
+
+            dt = BD.Consulta(sql);
+            return dt;
+        }
+
+        public DataTable ListaCompletaTipoVenda()
+        {
+            string sql = "SELECT RTE.DATA, " +
+                "SUM(RTE.TIPO_ENTRADA) AS TIPO," +
+                " TE.NOME AS TIPO_PAGAMENTO, " +
+                "RTE.VALOR_TOTAL AS TOTAL  " +
+                "FROM REL_TIPO_ENTRADA_CAIXA  RTE " +
+                "LEFT JOIN TIPO_ENTRADA TE ON TE.CODIGO = RTE.TIPO_ENTRADA " +
+                "WHERE RTE.TIPO_ENTRADA IN (1,2)   ";
+
+            dt = BD.Consulta(sql);
+            return dt;
+        }
     }
 }

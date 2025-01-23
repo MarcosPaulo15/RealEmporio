@@ -113,3 +113,4 @@ C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoPerfil.r
 C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoPagamento.resources
 C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcTroco.resources
 C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoAprovaFechamento.resources
+C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcRelVendas.resources

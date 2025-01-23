@@ -28,6 +28,9 @@
     <Compile Update="View\UcRegistrarProduto.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="View\UcRelVendas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="View\UcTroco.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -41,12 +41,12 @@
             relatóriosToolStripMenuItem = new ToolStripMenuItem();
             relatórioDeVendasToolStripMenuItem = new ToolStripMenuItem();
             vendaToolStripMenuItem = new ToolStripMenuItem();
+            tlsAprovaFechamento = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             PanCentral = new Panel();
             panUc = new Panel();
             lblUsuario = new Label();
             pcLogo = new PictureBox();
-            tlsAprovaFechamento = new ToolStripMenuItem();
             panMenu.SuspendLayout();
             menuStrip1.SuspendLayout();
             PanCentral.SuspendLayout();
@@ -146,6 +146,7 @@
             relatórioDeVendasToolStripMenuItem.Name = "relatórioDeVendasToolStripMenuItem";
             relatórioDeVendasToolStripMenuItem.Size = new Size(377, 46);
             relatórioDeVendasToolStripMenuItem.Text = "Relatório de Vendas";
+            relatórioDeVendasToolStripMenuItem.Click += relatórioDeVendasToolStripMenuItem_Click;
             // 
             // vendaToolStripMenuItem
             // 
@@ -155,6 +156,15 @@
             vendaToolStripMenuItem.Size = new Size(112, 42);
             vendaToolStripMenuItem.Text = "Venda";
             vendaToolStripMenuItem.Click += vendaToolStripMenuItem_Click;
+            // 
+            // tlsAprovaFechamento
+            // 
+            tlsAprovaFechamento.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tlsAprovaFechamento.Margin = new Padding(105, 0, 0, 0);
+            tlsAprovaFechamento.Name = "tlsAprovaFechamento";
+            tlsAprovaFechamento.Size = new Size(299, 42);
+            tlsAprovaFechamento.Text = "Aprovar Fechamento";
+            tlsAprovaFechamento.Click += tlsAprovaFechamento_Click;
             // 
             // sairToolStripMenuItem
             // 
@@ -208,15 +218,6 @@
             pcLogo.Size = new Size(1717, 668);
             pcLogo.TabIndex = 0;
             pcLogo.TabStop = false;
-            // 
-            // tlsAprovaFechamento
-            // 
-            tlsAprovaFechamento.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            tlsAprovaFechamento.Margin = new Padding(105, 0, 0, 0);
-            tlsAprovaFechamento.Name = "tlsAprovaFechamento";
-            tlsAprovaFechamento.Size = new Size(299, 42);
-            tlsAprovaFechamento.Text = "Aprovar Fechamento";
-            tlsAprovaFechamento.Click += tlsAprovaFechamento_Click;
             // 
             // FoPrincipal
             // 
