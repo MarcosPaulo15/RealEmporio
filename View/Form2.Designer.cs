@@ -45,6 +45,10 @@
             lblListaProdutos = new Label();
             panel7 = new Panel();
             panProdutos = new Panel();
+            lblDinheiro = new Label();
+            lblPix = new Label();
+            lblDebito = new Label();
+            lblCredito = new Label();
             panCodigoLabel = new Panel();
             lblCodigoValores = new Label();
             LblCodigoLabel = new Label();
@@ -66,10 +70,6 @@
             lblProduto = new Label();
             panLogo = new Panel();
             pictureBox1 = new PictureBox();
-            lblCredito = new Label();
-            lblDebito = new Label();
-            lblPix = new Label();
-            lblDinheiro = new Label();
             panTitulo.SuspendLayout();
             panCentral.SuspendLayout();
             panSubValues.SuspendLayout();
@@ -166,10 +166,10 @@
             // lblSubTotalVal
             // 
             lblSubTotalVal.AutoSize = true;
-            lblSubTotalVal.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSubTotalVal.Location = new Point(343, 34);
+            lblSubTotalVal.Font = new Font("Segoe UI", 28F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSubTotalVal.Location = new Point(270, 58);
             lblSubTotalVal.Name = "lblSubTotalVal";
-            lblSubTotalVal.Size = new Size(224, 96);
+            lblSubTotalVal.Size = new Size(175, 74);
             lblSubTotalVal.TabIndex = 1;
             lblSubTotalVal.Text = "00,00";
             // 
@@ -261,6 +261,46 @@
             panProdutos.Name = "panProdutos";
             panProdutos.Size = new Size(449, 739);
             panProdutos.TabIndex = 6;
+            // 
+            // lblDinheiro
+            // 
+            lblDinheiro.AutoSize = true;
+            lblDinheiro.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDinheiro.Location = new Point(11, 681);
+            lblDinheiro.Name = "lblDinheiro";
+            lblDinheiro.Size = new Size(278, 25);
+            lblDinheiro.TabIndex = 16;
+            lblDinheiro.Text = "F4 - PAGAMENTO EM DINHEIRO";
+            // 
+            // lblPix
+            // 
+            lblPix.AutoSize = true;
+            lblPix.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPix.Location = new Point(11, 642);
+            lblPix.Name = "lblPix";
+            lblPix.Size = new Size(223, 25);
+            lblPix.TabIndex = 15;
+            lblPix.Text = "F3 - PAGAMENTO NO PIX";
+            // 
+            // lblDebito
+            // 
+            lblDebito.AutoSize = true;
+            lblDebito.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDebito.Location = new Point(11, 605);
+            lblDebito.Name = "lblDebito";
+            lblDebito.Size = new Size(257, 25);
+            lblDebito.TabIndex = 14;
+            lblDebito.Text = "F2 - PAGAMENTO NO DÉBITO";
+            // 
+            // lblCredito
+            // 
+            lblCredito.AutoSize = true;
+            lblCredito.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCredito.Location = new Point(11, 565);
+            lblCredito.Name = "lblCredito";
+            lblCredito.Size = new Size(265, 25);
+            lblCredito.TabIndex = 13;
+            lblCredito.Text = "F1 - PAGAMENTO NO CRÉDITO";
             // 
             // panCodigoLabel
             // 
@@ -473,46 +513,6 @@
             pictureBox1.Size = new Size(522, 833);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            // 
-            // lblCredito
-            // 
-            lblCredito.AutoSize = true;
-            lblCredito.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCredito.Location = new Point(11, 565);
-            lblCredito.Name = "lblCredito";
-            lblCredito.Size = new Size(265, 25);
-            lblCredito.TabIndex = 13;
-            lblCredito.Text = "F1 - PAGAMENTO NO CRÉDITO";
-            // 
-            // lblDebito
-            // 
-            lblDebito.AutoSize = true;
-            lblDebito.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDebito.Location = new Point(11, 605);
-            lblDebito.Name = "lblDebito";
-            lblDebito.Size = new Size(257, 25);
-            lblDebito.TabIndex = 14;
-            lblDebito.Text = "F2 - PAGAMENTO NO DÉBITO";
-            // 
-            // lblPix
-            // 
-            lblPix.AutoSize = true;
-            lblPix.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPix.Location = new Point(11, 642);
-            lblPix.Name = "lblPix";
-            lblPix.Size = new Size(223, 25);
-            lblPix.TabIndex = 15;
-            lblPix.Text = "F3 - PAGAMENTO NO PIX";
-            // 
-            // lblDinheiro
-            // 
-            lblDinheiro.AutoSize = true;
-            lblDinheiro.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDinheiro.Location = new Point(11, 681);
-            lblDinheiro.Name = "lblDinheiro";
-            lblDinheiro.Size = new Size(278, 25);
-            lblDinheiro.TabIndex = 16;
-            lblDinheiro.Text = "F4 - PAGAMENTO EM DINHEIRO";
             // 
             // FoVendas2
             // 

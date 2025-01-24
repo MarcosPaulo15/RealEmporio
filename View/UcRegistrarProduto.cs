@@ -75,7 +75,7 @@ namespace EmporioRoyal.View
             }
             else
             {
-                mdProdutos.Codigo = int.Parse(txbCodigo.Text);
+                mdProdutos.Codigo = Convert.ToInt64(txbCodigo.Text);
                 mdProdutos.Nome = txbNome.Text;
                 mdProdutos.Descricao = txbDescricao.Text;
                 mdProdutos.Quantidade = int.Parse(txbQtd.Text);

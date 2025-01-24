@@ -12,14 +12,14 @@ namespace EmporioRoyal.Model
     internal class MdProdutos
     {
         DataTable dt;
-        int codigo;
+        long codigo;
         string nome;
         string valor;
         int quantidade;
         string descricao;
         DateTime vencimento;
 
-        public int Codigo
+        public long Codigo
         {
             get { return codigo; }
             set { codigo = value; }
@@ -58,7 +58,7 @@ namespace EmporioRoyal.Model
 
         public bool insert()
         {
-            string query = $"INSERT INTO PRODUTOS VALUES({Codigo}, '{Nome}', '{Descricao}', {Quantidade}, NULL, '{Valor}')";
+            string query = $"INSERT INTO PRODUTOS VALUES({Codigo}, '{Nome}', '{Descricao}', {Quantidade}, '{Valor}', NULL )";
             bool validaInsertProdutos = BD.Insert(query);
             return validaInsertProdutos;
         }
@@ -170,21 +170,80 @@ namespace EmporioRoyal.Model
                 "TE.NOME AS TIPO_PAGAMENTO, " +
                 "RTE.VALOR_TOTAL AS TOTAL  " +
                 "FROM REL_TIPO_ENTRADA_CAIXA  RTE " +
-                "LEFT JOIN TIPO_ENTRADA TE ON TE.CODIGO = RTE.TIPO_ENTRADA ";
+                "LEFT JOIN TIPO_ENTRADA TE ON TE.CODIGO = RTE.TIPO_ENTRADA  " +
+                "WHERE DATA BETWEEN date('now', '-30 days') AND date('now'); ";
 
             dt = BD.Consulta(sql);
             return dt;
         }
 
-        public DataTable ListaCompletaTipoVenda()
+        public DataTable ListaCompletaTipoVenda(string dataInicio, string dataFim)
+        {
+            string validaWhere = "";
+            if (!string.IsNullOrEmpty(dataInicio) && !string.IsNullOrEmpty(dataFim))
+            {
+                validaWhere = $"AND DATA BETWEEN '{dataInicio}' AND '{dataFim}'";
+            }
+
+            string sql = "select CAST(SUM(VALOR_TOTAL) AS DECIMAL) AS total from REL_TIPO_ENTRADA_CAIXA WHERE TIPO_ENTRADA in (1,2) " + validaWhere;
+
+            dt = BD.Consulta(sql);
+            return dt;
+        }
+
+        public DataTable ListaCompletaTipoDinheiro(string dataInicio , string dataFim)
+        {
+            string validaWhere = "";
+            if (!string.IsNullOrEmpty(dataInicio) && !string.IsNullOrEmpty(dataFim)) 
+            {
+                validaWhere = $"AND DATA BETWEEN '{dataInicio}' AND '{dataFim}'";
+            }
+            
+            string sql = "select SUM(VALOR_TOTAL) AS total from REL_TIPO_ENTRADA_CAIXA WHERE TIPO_ENTRADA = 4 " + validaWhere;
+
+            dt = BD.Consulta(sql);
+            return dt;
+        }
+
+        public DataTable ListaCompletaTipoPix(string dataInicio, string dataFim)
+        {
+            string validaWhere = "";
+            if (!string.IsNullOrEmpty(dataInicio) && !string.IsNullOrEmpty(dataFim))
+            {
+                validaWhere = $"AND DATA BETWEEN '{dataInicio}' AND '{dataFim}'";
+            }
+            string sql = "select CAST(SUM(VALOR_TOTAL) AS DECIMAL) AS total from REL_TIPO_ENTRADA_CAIXA WHERE TIPO_ENTRADA = 3 " + validaWhere;
+
+            dt = BD.Consulta(sql);
+            return dt;
+        }
+
+        public DataTable ListaCompletaTipoTotal(string dataInicio, string dataFim)
+        {
+            string validaWhere = "";
+            if (!string.IsNullOrEmpty(dataInicio) && !string.IsNullOrEmpty(dataFim))
+            {
+                validaWhere = $"WHERE DATA BETWEEN '{dataInicio}' AND '{dataFim}'";
+            }
+
+            string sql = "SELECT RTE.DATA, " +
+                "TE.NOME AS TIPO_PAGAMENTO, " +
+                "SUM(RTE.VALOR_TOTAL) AS TOTAL  " +
+                "FROM REL_TIPO_ENTRADA_CAIXA  RTE " +
+                "LEFT JOIN TIPO_ENTRADA TE ON TE.CODIGO = RTE.TIPO_ENTRADA " + validaWhere;
+
+            dt = BD.Consulta(sql);
+            return dt;
+        }
+
+        public DataTable RelatorioData(string dataInicio, string dataFim)
         {
             string sql = "SELECT RTE.DATA, " +
-                "SUM(RTE.TIPO_ENTRADA) AS TIPO," +
-                " TE.NOME AS TIPO_PAGAMENTO, " +
+                "TE.NOME AS TIPO_PAGAMENTO, " +
                 "RTE.VALOR_TOTAL AS TOTAL  " +
                 "FROM REL_TIPO_ENTRADA_CAIXA  RTE " +
                 "LEFT JOIN TIPO_ENTRADA TE ON TE.CODIGO = RTE.TIPO_ENTRADA " +
-                "WHERE RTE.TIPO_ENTRADA IN (1,2)   ";
+                $"WHERE DATA BETWEEN '{dataInicio}' AND '{dataFim}'";
 
             dt = BD.Consulta(sql);
             return dt;

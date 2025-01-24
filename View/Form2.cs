@@ -85,7 +85,7 @@ namespace EmporioRoyal.View
                                 {
                                     // string valorTotal = produto.SomaTodosValores(idMax).Rows[0]["TOTAL"].ToString();
                                     //lblSubTotalVal.Text = "R$" + valorTotal + ",00";
-                                    lblSubTotalVal.Text = produto.SomaTodosValores(idMax).Rows[0]["TOTAL"].ToString();
+                                    lblSubTotalVal.Text = "R$ " + produto.SomaTodosValores(idMax).Rows[0]["TOTAL"].ToString();
                                     txbCodigoBarras.Clear();
                                 }
                             }

@@ -21,23 +21,42 @@ namespace EmporioRoyal.View
             Initialize();
             dtpData.Format = DateTimePickerFormat.Custom;
             dtpData.CustomFormat = "dd-MM-yyyy";
-        }
-
-        private void dtpData_ValueChanged(object sender, EventArgs e)
-        {
-            
-            /*dt = BD.Consulta(sql);
-            dgvLista.DataSource = dt;
-            dgvLista.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;*/
+            dtpDataFim.Format = DateTimePickerFormat.Custom;
+            dtpDataFim.CustomFormat = "dd-MM-yyyy";
         }
 
         private void Initialize()
         {
             dgvRelatorio.DataSource = mdProdutos.ListaCompletaVendas();
             dgvRelatorio.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            string tipo = mdProdutos.ListaCompletaTipoVenda(string.Empty, string.Empty).Rows[0]["TOTAL"].ToString();
+            lblTotalCard.Text = "TOTAL CARTÃO: R$" + tipo;
+            string dinheiro = mdProdutos.ListaCompletaTipoDinheiro(string.Empty, string.Empty).Rows[0]["TOTAL"].ToString();
+            double valor = Convert.ToDouble(dinheiro);
+            lblDinheiro.Text = "TOTAL DINHEIRO: R$" + valor.ToString("F2");
+            string pix = mdProdutos.ListaCompletaTipoPix(string.Empty, string.Empty).Rows[0]["TOTAL"].ToString();
+            lblPix.Text = "TOTAL PIX: R$ " + pix;
+            string total = mdProdutos.ListaCompletaTipoTotal(string.Empty, string.Empty).Rows[0]["TOTAL"].ToString();
+            lblTotal.Text = "TOTAL : R$ " + total;
+        }
 
-            string tipo = mdProdutos.ListaCompletaTipoVenda().Rows[0]["TIPO"].ToString();
-            lblTotalCard.Text = "TOTAL CARTÃO = " + tipo;
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            DateTime dataInic = dtpData.Value;
+            DateTime dataFim = dtpDataFim.Value;
+
+            dgvRelatorio.DataSource = mdProdutos.RelatorioData(dataInic.ToString("yyyy-MM-dd"), dataFim.ToString("yyyy-MM-dd"));
+            dgvRelatorio.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            string tipo = mdProdutos.ListaCompletaTipoVenda(dataInic.ToString("yyyy-MM-dd"), dataFim.ToString("yyyy-MM-dd")).Rows[0]["TOTAL"].ToString();
+            lblTotalCard.Text = "TOTAL CARTÃO: R$ " + tipo;
+            string dinheiro = mdProdutos.ListaCompletaTipoDinheiro(dataInic.ToString("yyyy-MM-dd"), dataFim.ToString("yyyy-MM-dd")).Rows[0]["TOTAL"].ToString();
+            double valor = Convert.ToDouble(dinheiro);
+            lblDinheiro.Text = "TOTAL DINHEIRO: R$ " + valor.ToString("F2");
+            string pix = mdProdutos.ListaCompletaTipoPix(dataInic.ToString("yyyy-MM-dd"), dataFim.ToString("yyyy-MM-dd")).Rows[0]["TOTAL"].ToString();
+            lblPix.Text = "TOTAL PIX: R$ " + pix;
+            string total = mdProdutos.ListaCompletaTipoTotal(dataInic.ToString("yyyy-MM-dd"), dataFim.ToString("yyyy-MM-dd")).Rows[0]["TOTAL"].ToString();
+            lblTotal.Text = "TOTAL : R$ " + total;
         }
     }
 }
