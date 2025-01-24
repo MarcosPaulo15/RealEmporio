@@ -111,7 +111,7 @@ namespace EmporioRoyal.Model
             return dt;
         }
 
-        public bool InsereTipoVenda(int id, char tipo_entrada, int id_user, char fechamentoCaixa, char aprovaFechamento)
+        public bool InsereTipoVenda(int id, char tipo_entrada, int id_user, char fechamentoCaixa, char aprovaFechamento, string codigoCliente)
         {
             DateTime dataAtual = DateTime.Today;
             string data = dataAtual.ToString("yyyy-MM-dd");
@@ -123,7 +123,8 @@ namespace EmporioRoyal.Model
                 $"CODIGO AS ID_VENDA," +
                 $"{id_user} AS ID_USER, " +
                 $"'{fechamentoCaixa}' AS FECHAMENTO_CAIXA, " +
-                $"'{aprovaFechamento}' AS APROVA_FECHAMENTO FROM VENDAS WHERE CODIGO = {id} ";
+                $"'{aprovaFechamento}' AS APROVA_FECHAMENTO," +
+                $" '{codigoCliente}' AS CODIGO_CLIENTE FROM VENDAS WHERE CODIGO = {id} ";
 
             return BD.Insert(sql); 
         }
@@ -247,6 +248,15 @@ namespace EmporioRoyal.Model
 
             dt = BD.Consulta(sql);
             return dt;
+        }
+
+
+        public bool InsereClienteCompra(string codigoCliente, int codigoCompra)
+        {
+
+            string sql = $"UPDATE REL_TIPO_ENTRADA_CAIXA SET CODIGO_CLIENTE = '{codigoCliente}' WHERE ID_VENDA = {codigoCompra}";
+
+            return BD.Update(sql);
         }
     }
 }

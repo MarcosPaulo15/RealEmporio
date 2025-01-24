@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmporioRoyal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08bc5f630e968ace3e639ef72b29c2e8c88dd22d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edaa9636764fa5dedd35fae55b3f7365a51f48e7")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmporioRoyal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmporioRoyal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

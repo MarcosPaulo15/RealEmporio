@@ -48,7 +48,7 @@ namespace EmporioRoyal.View
                 {                    
                     //FoVendas2 foVendas2 = new FoVendas2(true);
                     MessageBox.Show("Compra tipo Dinheiro Concluida com sucesso!");
-                    if(mdProdutos.InsereTipoVenda(idMax, '4', userId, '0', '0'))
+                    if(mdProdutos.InsereTipoVenda(idMax, '4', userId, '0', '0', "0"))
                     {
                         Form parentForm = this.FindForm();
                         if (parentForm != null)

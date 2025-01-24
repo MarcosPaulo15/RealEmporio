@@ -70,6 +70,8 @@
             lblProduto = new Label();
             panLogo = new Panel();
             pictureBox1 = new PictureBox();
+            lblConvenio = new Label();
+            lblDeletar = new Label();
             panTitulo.SuspendLayout();
             panCentral.SuspendLayout();
             panSubValues.SuspendLayout();
@@ -132,13 +134,13 @@
             panCentral.Dock = DockStyle.Left;
             panCentral.Location = new Point(0, 106);
             panCentral.Name = "panCentral";
-            panCentral.Size = new Size(1163, 833);
+            panCentral.Size = new Size(1163, 852);
             panCentral.TabIndex = 4;
             // 
             // panel11
             // 
             panel11.Dock = DockStyle.Bottom;
-            panel11.Location = new Point(503, 685);
+            panel11.Location = new Point(503, 704);
             panel11.Name = "panel11";
             panel11.Size = new Size(658, 146);
             panel11.TabIndex = 13;
@@ -240,11 +242,13 @@
             panel7.Dock = DockStyle.Left;
             panel7.Location = new Point(449, 92);
             panel7.Name = "panel7";
-            panel7.Size = new Size(54, 739);
+            panel7.Size = new Size(54, 758);
             panel7.TabIndex = 8;
             // 
             // panProdutos
             // 
+            panProdutos.Controls.Add(lblDeletar);
+            panProdutos.Controls.Add(lblConvenio);
             panProdutos.Controls.Add(lblDinheiro);
             panProdutos.Controls.Add(lblPix);
             panProdutos.Controls.Add(lblDebito);
@@ -259,14 +263,14 @@
             panProdutos.Dock = DockStyle.Left;
             panProdutos.Location = new Point(0, 92);
             panProdutos.Name = "panProdutos";
-            panProdutos.Size = new Size(449, 739);
+            panProdutos.Size = new Size(449, 758);
             panProdutos.TabIndex = 6;
             // 
             // lblDinheiro
             // 
             lblDinheiro.AutoSize = true;
             lblDinheiro.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDinheiro.Location = new Point(11, 681);
+            lblDinheiro.Location = new Point(11, 640);
             lblDinheiro.Name = "lblDinheiro";
             lblDinheiro.Size = new Size(278, 25);
             lblDinheiro.TabIndex = 16;
@@ -276,7 +280,7 @@
             // 
             lblPix.AutoSize = true;
             lblPix.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPix.Location = new Point(11, 642);
+            lblPix.Location = new Point(11, 615);
             lblPix.Name = "lblPix";
             lblPix.Size = new Size(223, 25);
             lblPix.TabIndex = 15;
@@ -286,7 +290,7 @@
             // 
             lblDebito.AutoSize = true;
             lblDebito.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDebito.Location = new Point(11, 605);
+            lblDebito.Location = new Point(11, 590);
             lblDebito.Name = "lblDebito";
             lblDebito.Size = new Size(257, 25);
             lblDebito.TabIndex = 14;
@@ -500,7 +504,7 @@
             panLogo.Dock = DockStyle.Fill;
             panLogo.Location = new Point(1163, 106);
             panLogo.Name = "panLogo";
-            panLogo.Size = new Size(522, 833);
+            panLogo.Size = new Size(522, 852);
             panLogo.TabIndex = 5;
             // 
             // pictureBox1
@@ -510,16 +514,36 @@
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(522, 833);
+            pictureBox1.Size = new Size(522, 852);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            // 
+            // lblConvenio
+            // 
+            lblConvenio.AutoSize = true;
+            lblConvenio.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblConvenio.Location = new Point(11, 665);
+            lblConvenio.Name = "lblConvenio";
+            lblConvenio.Size = new Size(141, 25);
+            lblConvenio.TabIndex = 17;
+            lblConvenio.Text = "F5 - CONVÊNIO";
+            // 
+            // lblDeletar
+            // 
+            lblDeletar.AutoSize = true;
+            lblDeletar.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDeletar.Location = new Point(11, 690);
+            lblDeletar.Name = "lblDeletar";
+            lblDeletar.Size = new Size(210, 25);
+            lblDeletar.TabIndex = 18;
+            lblDeletar.Text = "F6 - DELETAR PRODUTO";
             // 
             // FoVendas2
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 128, 128);
-            ClientSize = new Size(1685, 939);
+            ClientSize = new Size(1685, 958);
             Controls.Add(panLogo);
             Controls.Add(panCentral);
             Controls.Add(panel2);
@@ -592,7 +616,7 @@
         private Panel panel8;
         private Panel panTroco;
         private Panel panTrocoLiq;
-        private Label label3;
+        private Label lblDeletar;
         private Label label7;
         private Label lblTotalTrocoTit;
         private Panel panTotalRecebido;
@@ -606,5 +630,6 @@
         private Label lblDebito;
         private Label lblCredito;
         private Label lblDinheiro;
+        private Label lblConvenio;
     }
 }

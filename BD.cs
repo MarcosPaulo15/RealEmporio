@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SQLite;
+using System.Data.SqlClient;
 
 namespace EmporioRoyal
 {
@@ -22,7 +23,7 @@ namespace EmporioRoyal
         public static DataTable ObterTodosUsuarios()
         {
 
-            SQLiteDataAdapter da = null; 
+            SQLiteDataAdapter da = null;
             DataTable dt = new DataTable();
 
             try
@@ -35,7 +36,8 @@ namespace EmporioRoyal
                     return dt;
                 }
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
 
                 throw ex;
 
@@ -68,7 +70,7 @@ namespace EmporioRoyal
 
         public static bool Insert(string sql)
         {
-           // string sql = $"INSERT INTO CLIENTES (NOME, TELEFONE, WPP, ENDERECO, BAIRRO, ATIVO) VALUES ('{Nome}', '{Telefone}', '{Wpp}', '{Endereco}', '{Bairro}', '{Ativo}')";
+            // string sql = $"INSERT INTO CLIENTES (NOME, TELEFONE, WPP, ENDERECO, BAIRRO, ATIVO) VALUES ('{Nome}', '{Telefone}', '{Wpp}', '{Endereco}', '{Bairro}', '{Ativo}')";
             try
             {
                 using (var cmd = ConexaoBanco().CreateCommand())
@@ -108,5 +110,6 @@ namespace EmporioRoyal
             }
         }
 
+        
     }
 }

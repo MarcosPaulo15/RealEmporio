@@ -102,7 +102,7 @@ namespace EmporioRoyal.View
             if (e.KeyCode == Keys.F1)
             {
 
-                if (mdProdutos.InsereTipoVenda(idMax, '1', usuarioID, '0', '0'))
+                if (mdProdutos.InsereTipoVenda(idMax, '1', usuarioID, '0', '0', "0"))
                 {
                     MessageBox.Show("Compra tipo crédito Concluida com sucesso!");
                     Form parentForm = this.FindForm();
@@ -121,7 +121,7 @@ namespace EmporioRoyal.View
             else if (e.KeyCode == Keys.F2)
             {
 
-                if (mdProdutos.InsereTipoVenda(idMax, '2', usuarioID, '0', '0'))
+                if (mdProdutos.InsereTipoVenda(idMax, '2', usuarioID, '0', '0', "0"))
                 {
                     MessageBox.Show("Compra tipo Débito Concluida com sucesso!");
                     Form parentForm = this.FindForm();
@@ -141,7 +141,7 @@ namespace EmporioRoyal.View
             else if (e.KeyCode == Keys.F3)
             {
 
-                if (mdProdutos.InsereTipoVenda(idMax, '3', usuarioID, '0', '0'))
+                if (mdProdutos.InsereTipoVenda(idMax, '3', usuarioID, '0', '0', "0"))
                 {
                     MessageBox.Show("Compra tipo Pix Concluida com sucesso!");
                     Form parentForm = this.FindForm();
@@ -163,6 +163,15 @@ namespace EmporioRoyal.View
                 var myControl = new UcTroco(idMax, usuarioID);
                 panel11.Controls.Add(myControl);
                 myControl.Dock = DockStyle.Fill;
+            }  
+            
+            if(e.KeyCode == Keys.F5)
+            {
+                
+
+                var myControl = new UcConvenio(idMax, usuarioID);
+                panel11.Controls.Add(myControl);
+                myControl.Dock = DockStyle.Fill;                
             }
         }
 
