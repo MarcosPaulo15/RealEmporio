@@ -15,7 +15,7 @@ namespace EmporioRoyal
 
         private static SQLiteConnection ConexaoBanco()
         {
-            conexao = new SQLiteConnection("Data Source=C:\\gitprojects\\RealEmporio\\bd\\bd_emporio.db");
+            conexao = new SQLiteConnection("Data Source=C:\\gitprojets\\RealEmporio\\bd\\bd_emporio.db");
             conexao.Open();
             return conexao;
         }
@@ -110,6 +110,25 @@ namespace EmporioRoyal
             }
         }
 
-        
+        public static bool Delete(string sql)
+        {
+            // string sql = $"INSERT INTO CLIENTES (NOME, TELEFONE, WPP, ENDERECO, BAIRRO, ATIVO) VALUES ('{Nome}', '{Telefone}', '{Wpp}', '{Endereco}', '{Bairro}', '{Ativo}')";
+            try
+            {
+                using (var cmd = ConexaoBanco().CreateCommand())
+                {
+                    cmd.CommandText = sql;
+                    cmd.ExecuteNonQuery();
+                    ConexaoBanco().Close();
+                    return true; // Inserção bem-sucedida
+                }
+            }
+            catch (Exception ex)
+            {
+                ConexaoBanco().Close();
+                MessageBox.Show("Erro ao inserir cliente: " + ex.Message);
+                return false; // Falha na inserção
+            }
+        }
     }
 }

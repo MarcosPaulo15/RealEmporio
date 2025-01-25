@@ -1,4 +1,5 @@
 ﻿using EmporioRoyal.Model;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,8 @@ namespace EmporioRoyal.View
             //Initialize(id);
             idMax = id;
             usuarioID = idUsuario;
+
+            Initialize();
         }
 
         public FoVendas2(bool fecha)
@@ -35,9 +38,11 @@ namespace EmporioRoyal.View
             if (fecha)
                 Close();
         }
-        public void Initialize(int id)
+        public void Initialize()
         {
-            MessageBox.Show(id.ToString());
+            MdProdutos mdProdutos = new MdProdutos();
+            dgvListaProdutos.DataSource = mdProdutos.CarregaListaVendas(idMax); ;
+            dgvListaProdutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
 
@@ -92,7 +97,8 @@ namespace EmporioRoyal.View
 
 
                         }
-                    } else
+                    }
+                    else
                     {
                         MessageBox.Show("CODIGO DE BARRAS INVALIDO, FAVOR DIGITE UM CODIGO VALIDO");
                     }
@@ -163,17 +169,42 @@ namespace EmporioRoyal.View
                 var myControl = new UcTroco(idMax, usuarioID);
                 panel11.Controls.Add(myControl);
                 myControl.Dock = DockStyle.Fill;
-            }  
-            
-            if(e.KeyCode == Keys.F5)
+            }
+
+            if (e.KeyCode == Keys.F5)
             {
-                
 
                 var myControl = new UcConvenio(idMax, usuarioID);
                 panel11.Controls.Add(myControl);
-                myControl.Dock = DockStyle.Fill;                
+                myControl.Dock = DockStyle.Fill;
+            }
+            DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
+            if (e.KeyCode == Keys.F6)
+            {
+                // Adiciona a coluna de botão ao DataGridView
+                
+                buttonColumn.HeaderText = "Deletar";
+                buttonColumn.Name = "Ação";  // Certifique-se de definir o nome da coluna
+                buttonColumn.Text = "Deletar";
+                buttonColumn.UseColumnTextForButtonValue = true;
+                dgvListaProdutos.Columns.Add(buttonColumn);
+
+                
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                if (e.KeyCode == Keys.Escape)
+                {
+                    // Define a visibilidade da coluna de botão para false
+                    if (dgvListaProdutos.Columns["Ação"] != null)
+                    {
+                        dgvListaProdutos.Columns["Ação"].Visible = false;
+                    }
+                }
             }
         }
+
+
 
 
         public void LoadList(int id)
@@ -193,5 +224,34 @@ namespace EmporioRoyal.View
                 foPagamento.Show();
             }
         }
+
+        private void dgvListaProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifique se a coluna "Ação" existe e se o índice da coluna está correto
+            if (e.ColumnIndex == dgvListaProdutos.Columns["Ação"].Index && e.RowIndex >= 0)
+            {
+                int idProd = Convert.ToInt32(dgvListaProdutos.Rows[e.RowIndex].Cells["CODIGO_PRODUTO"].Value);
+                ValidaExclusãoProd(idProd);
+                Initialize();
+            }
+        }
+
+        private void ValidaExclusãoProd(int idProd)
+        {
+            MdProdutos mdProdutos = new MdProdutos();
+            if (mdProdutos.ExcluiProdutos(idMax, idProd))
+            {
+                MessageBox.Show("Produto excluido!");
+            }
+
+            else
+            {
+                MessageBox.Show("Falha ao excluir produtos, favor procure o administrador do sistema");
+            }
+
+        }
+
+        
+
     }
 }

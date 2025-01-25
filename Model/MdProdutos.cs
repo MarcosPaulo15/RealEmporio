@@ -96,7 +96,7 @@ namespace EmporioRoyal.Model
 
         public DataTable CarregaListaVendas(int id)
         {
-            string sql = $"SELECT P.NOME, V.VALOR FROM VENDAS V LEFT JOIN PRODUTOS P ON P.CODIGO = V.ID_PRODUTO WHERE V.CODIGO = {id}";
+            string sql = $"SELECT V.ID_PRODUTO AS CODIGO_PRODUTO, P.NOME, V.VALOR FROM VENDAS V LEFT JOIN PRODUTOS P ON P.CODIGO = V.ID_PRODUTO WHERE V.CODIGO = {id}";
             DataTable dt = new DataTable();
             dt = BD.Consulta(sql);
 
@@ -213,7 +213,7 @@ namespace EmporioRoyal.Model
             {
                 validaWhere = $"AND DATA BETWEEN '{dataInicio}' AND '{dataFim}'";
             }
-            string sql = "select CAST(SUM(VALOR_TOTAL) AS DECIMAL) AS total from REL_TIPO_ENTRADA_CAIXA WHERE TIPO_ENTRADA = 3 " + validaWhere;
+            string sql = "select ROUND(SUM(VALOR_TOTAL), 2) AS total from REL_TIPO_ENTRADA_CAIXA WHERE TIPO_ENTRADA = 3 " + validaWhere;
 
             dt = BD.Consulta(sql);
             return dt;
@@ -229,7 +229,7 @@ namespace EmporioRoyal.Model
 
             string sql = "SELECT RTE.DATA, " +
                 "TE.NOME AS TIPO_PAGAMENTO, " +
-                "SUM(RTE.VALOR_TOTAL) AS TOTAL  " +
+                "ROUND(SUM(RTE.VALOR_TOTAL), 2) AS TOTAL " +
                 "FROM REL_TIPO_ENTRADA_CAIXA  RTE " +
                 "LEFT JOIN TIPO_ENTRADA TE ON TE.CODIGO = RTE.TIPO_ENTRADA " + validaWhere;
 
@@ -257,6 +257,13 @@ namespace EmporioRoyal.Model
             string sql = $"UPDATE REL_TIPO_ENTRADA_CAIXA SET CODIGO_CLIENTE = '{codigoCliente}' WHERE ID_VENDA = {codigoCompra}";
 
             return BD.Update(sql);
+        }
+
+        public bool ExcluiProdutos(int idVenda, int idProd)
+        {
+            string sql = $"DELETE FROM VENDAS WHERE CODIGO = {idVenda} AND ID_PRODUTO = {idProd}";
+
+            return BD.Delete(sql);
         }
     }
 }

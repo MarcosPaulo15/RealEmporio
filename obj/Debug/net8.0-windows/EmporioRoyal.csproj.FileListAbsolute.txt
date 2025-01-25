@@ -115,3 +115,15 @@ C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcTroco.re
 C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoAprovaFechamento.resources
 C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcRelVendas.resources
 C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcConvenio.resources
+C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoAprovaFechamento.resources
+C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoPagamento.resources
+C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoPerfil.resources
+C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoVendas2.resources
+C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoVendas.resources
+C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcConvenio.resources
+C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcRegistrarProduto.resources
+C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcRelVendas.resources
+C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcTroco.resources
+C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcVisualiza.resources
+C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcVisualizarProdutos.resources
+C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoCancelarVenda.resources

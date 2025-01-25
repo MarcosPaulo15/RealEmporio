@@ -4,6 +4,9 @@
     <Compile Update="View\FoAprovaFechamento.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\FoCancelarVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\FoPagamento.cs">
       <SubType>Form</SubType>
     </Compile>

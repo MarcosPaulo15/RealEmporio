@@ -60,8 +60,9 @@
             panMenu.Controls.Add(menuStrip1);
             panMenu.Dock = DockStyle.Top;
             panMenu.Location = new Point(0, 0);
+            panMenu.Margin = new Padding(2);
             panMenu.Name = "panMenu";
-            panMenu.Size = new Size(1717, 57);
+            panMenu.Size = new Size(959, 34);
             panMenu.TabIndex = 2;
             // 
             // menuStrip1
@@ -71,7 +72,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { tlsInicio, clienteToolStripMenuItem, estoqueToolStripMenuItem, relatóriosToolStripMenuItem, vendaToolStripMenuItem, tlsAprovaFechamento, sairToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1717, 46);
+            menuStrip1.Padding = new Padding(4, 1, 0, 1);
+            menuStrip1.Size = new Size(959, 31);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -81,7 +83,7 @@
             tlsInicio.ForeColor = Color.Black;
             tlsInicio.Name = "tlsInicio";
             tlsInicio.RightToLeft = RightToLeft.No;
-            tlsInicio.Size = new Size(101, 42);
+            tlsInicio.Size = new Size(71, 29);
             tlsInicio.Text = "Inicio";
             tlsInicio.TextAlign = ContentAlignment.TopCenter;
             tlsInicio.Click += tlsInicio_Click;
@@ -92,20 +94,20 @@
             clienteToolStripMenuItem.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             clienteToolStripMenuItem.Margin = new Padding(105, 0, 0, 0);
             clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            clienteToolStripMenuItem.Size = new Size(120, 42);
+            clienteToolStripMenuItem.Size = new Size(84, 29);
             clienteToolStripMenuItem.Text = "Cliente";
             // 
             // adicionarNovoClienteToolStripMenuItem
             // 
             adicionarNovoClienteToolStripMenuItem.Name = "adicionarNovoClienteToolStripMenuItem";
-            adicionarNovoClienteToolStripMenuItem.Size = new Size(408, 46);
+            adicionarNovoClienteToolStripMenuItem.Size = new Size(276, 30);
             adicionarNovoClienteToolStripMenuItem.Text = "Adicionar novo cliente";
             adicionarNovoClienteToolStripMenuItem.Click += adicionarNovoClienteToolStripMenuItem_Click;
             // 
             // verClientesToolStripMenuItem
             // 
             verClientesToolStripMenuItem.Name = "verClientesToolStripMenuItem";
-            verClientesToolStripMenuItem.Size = new Size(408, 46);
+            verClientesToolStripMenuItem.Size = new Size(276, 30);
             verClientesToolStripMenuItem.Text = "Ver Clientes";
             verClientesToolStripMenuItem.Click += verClientesToolStripMenuItem_Click;
             // 
@@ -115,20 +117,20 @@
             estoqueToolStripMenuItem.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             estoqueToolStripMenuItem.Margin = new Padding(105, 0, 0, 0);
             estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
-            estoqueToolStripMenuItem.Size = new Size(135, 42);
+            estoqueToolStripMenuItem.Size = new Size(92, 29);
             estoqueToolStripMenuItem.Text = "Estoque";
             // 
             // registrarProdutosToolStripMenuItem
             // 
             registrarProdutosToolStripMenuItem.Name = "registrarProdutosToolStripMenuItem";
-            registrarProdutosToolStripMenuItem.Size = new Size(367, 46);
+            registrarProdutosToolStripMenuItem.Size = new Size(248, 30);
             registrarProdutosToolStripMenuItem.Text = "Registrar produtos";
             registrarProdutosToolStripMenuItem.Click += registrarProdutosToolStripMenuItem_Click;
             // 
             // entradaDeProdutosToolStripMenuItem
             // 
             entradaDeProdutosToolStripMenuItem.Name = "entradaDeProdutosToolStripMenuItem";
-            entradaDeProdutosToolStripMenuItem.Size = new Size(367, 46);
+            entradaDeProdutosToolStripMenuItem.Size = new Size(248, 30);
             entradaDeProdutosToolStripMenuItem.Text = "Visualizar Produtos";
             entradaDeProdutosToolStripMenuItem.Click += entradaDeProdutosToolStripMenuItem_Click;
             // 
@@ -138,13 +140,13 @@
             relatóriosToolStripMenuItem.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             relatóriosToolStripMenuItem.Margin = new Padding(105, 0, 0, 0);
             relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
-            relatóriosToolStripMenuItem.Size = new Size(159, 42);
+            relatóriosToolStripMenuItem.Size = new Size(109, 29);
             relatóriosToolStripMenuItem.Text = "Relatórios";
             // 
             // relatórioDeVendasToolStripMenuItem
             // 
             relatórioDeVendasToolStripMenuItem.Name = "relatórioDeVendasToolStripMenuItem";
-            relatórioDeVendasToolStripMenuItem.Size = new Size(377, 46);
+            relatórioDeVendasToolStripMenuItem.Size = new Size(253, 30);
             relatórioDeVendasToolStripMenuItem.Text = "Relatório de Vendas";
             relatórioDeVendasToolStripMenuItem.Click += relatórioDeVendasToolStripMenuItem_Click;
             // 
@@ -153,7 +155,7 @@
             vendaToolStripMenuItem.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             vendaToolStripMenuItem.Margin = new Padding(105, 0, 0, 0);
             vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
-            vendaToolStripMenuItem.Size = new Size(112, 42);
+            vendaToolStripMenuItem.Size = new Size(77, 29);
             vendaToolStripMenuItem.Text = "Venda";
             vendaToolStripMenuItem.Click += vendaToolStripMenuItem_Click;
             // 
@@ -162,7 +164,7 @@
             tlsAprovaFechamento.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             tlsAprovaFechamento.Margin = new Padding(105, 0, 0, 0);
             tlsAprovaFechamento.Name = "tlsAprovaFechamento";
-            tlsAprovaFechamento.Size = new Size(299, 42);
+            tlsAprovaFechamento.Size = new Size(204, 29);
             tlsAprovaFechamento.Text = "Aprovar Fechamento";
             tlsAprovaFechamento.Click += tlsAprovaFechamento_Click;
             // 
@@ -171,7 +173,7 @@
             sairToolStripMenuItem.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             sairToolStripMenuItem.Margin = new Padding(105, 0, 0, 0);
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(80, 42);
+            sairToolStripMenuItem.Size = new Size(56, 29);
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
@@ -181,8 +183,9 @@
             PanCentral.Controls.Add(panMenu);
             PanCentral.Dock = DockStyle.Fill;
             PanCentral.Location = new Point(0, 0);
+            PanCentral.Margin = new Padding(2);
             PanCentral.Name = "PanCentral";
-            PanCentral.Size = new Size(1717, 725);
+            PanCentral.Size = new Size(959, 435);
             PanCentral.TabIndex = 0;
             // 
             // panUc
@@ -190,20 +193,20 @@
             panUc.Controls.Add(lblUsuario);
             panUc.Controls.Add(pcLogo);
             panUc.Dock = DockStyle.Fill;
-            panUc.Location = new Point(0, 57);
-            panUc.Margin = new Padding(4, 5, 4, 5);
+            panUc.Location = new Point(0, 34);
             panUc.Name = "panUc";
-            panUc.Size = new Size(1717, 668);
+            panUc.Size = new Size(959, 401);
             panUc.TabIndex = 3;
             // 
             // lblUsuario
             // 
-            lblUsuario.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblUsuario.AutoSize = true;
+            lblUsuario.Dock = DockStyle.Right;
             lblUsuario.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUsuario.Location = new Point(1634, 21);
+            lblUsuario.Location = new Point(914, 0);
+            lblUsuario.Margin = new Padding(2, 0, 2, 0);
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(63, 28);
+            lblUsuario.Size = new Size(45, 19);
             lblUsuario.TabIndex = 0;
             lblUsuario.Text = "label1";
             // 
@@ -213,20 +216,20 @@
             pcLogo.BackgroundImageLayout = ImageLayout.Stretch;
             pcLogo.Dock = DockStyle.Fill;
             pcLogo.Location = new Point(0, 0);
-            pcLogo.Margin = new Padding(4, 5, 4, 5);
             pcLogo.Name = "pcLogo";
-            pcLogo.Size = new Size(1717, 668);
+            pcLogo.Size = new Size(959, 401);
             pcLogo.TabIndex = 0;
             pcLogo.TabStop = false;
             // 
             // FoPrincipal
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 128, 128);
-            ClientSize = new Size(1717, 725);
+            ClientSize = new Size(959, 435);
             Controls.Add(PanCentral);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FoPrincipal";
