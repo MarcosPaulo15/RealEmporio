@@ -7,6 +7,9 @@
     <Compile Update="View\FoCancelarVenda.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\FoObservacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\FoPagamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -38,6 +41,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="View\UcTroco.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="View\UcVerClientes.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="View\UcVisualiza.cs">

@@ -174,7 +174,7 @@ namespace EmporioRoyal.View
             if (e.KeyCode == Keys.F5)
             {
 
-                var myControl = new UcConvenio(idMax, usuarioID);
+                var myControl = new UcConvenio(idMax, usuarioID, lblSubTotalVal.Text);
                 panel11.Controls.Add(myControl);
                 myControl.Dock = DockStyle.Fill;
             }

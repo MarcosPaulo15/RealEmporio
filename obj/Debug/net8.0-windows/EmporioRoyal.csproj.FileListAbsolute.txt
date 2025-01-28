@@ -127,3 +127,7 @@ C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcTroco.res
 C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcVisualiza.resources
 C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcVisualizarProdutos.resources
 C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoCancelarVenda.resources
+C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoCancelarVenda.resources
+C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcVerClientes.resources
+C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoObservacao.resources
+C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoAcertarFracionado.resources

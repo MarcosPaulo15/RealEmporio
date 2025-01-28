@@ -70,5 +70,24 @@ namespace EmporioRoyal.Model
             bool validaInsert = BD.Insert(sql);
             return validaInsert;
         }
+
+        public DataTable CarregaListaCompletaDebitos()
+        {
+            string sql = "SELECT  DC.ID_CLIENTE AS ID, " +
+                         "CLI.NOME, CLI.TELEFONE, " +
+                         "(CASE WHEN CLI.WHATSAPP = 1 THEN 'S' ELSE 'N' END) AS WHATSAPP, " +
+                         "ROUND(DC.VALOR_TOTAL, 2) AS VALOR_TOTAL " +
+                         "FROM DEBITO_CLIENTE DC " +
+                         "INNER JOIN CLIENTES CLI ON CLI.ID = DC.ID_CLIENTE WHERE STATUS = 0";
+
+            dt = BD.Consulta(sql);
+
+            return dt;
+        }
+
+       /* public bool QuitarDebitoTotal()
+        {
+            string sql = "UPDATE REL_TIPO_ENTRADA_CAIX SET "
+        }*/
     }
 }

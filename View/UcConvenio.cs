@@ -16,13 +16,15 @@ namespace EmporioRoyal.View
     public partial class UcConvenio : UserControl
     {
         int codigoCompra;
-        int userId; 
-        public UcConvenio(int idCompra, int idUser)
+        int userId;
+        string total; 
+        public UcConvenio(int idCompra, int idUser, string ValorRecebido)
         {
             InitializeComponent();
             Initialize();
             codigoCompra = idCompra;
             userId = idUser;
+            total = ValorRecebido;
         }
 
         public void Initialize()
@@ -53,14 +55,22 @@ namespace EmporioRoyal.View
 
                         if (mdProdutos.InsereTipoVenda(codigoCompra, '5', userId, '0', '0', codigoId))
                         {
-                            MessageBox.Show("Compra tipo convenio Concluida com sucesso!");
-                            Form parentForm = this.FindForm();
-                            if (parentForm != null)
+                            if (mdProdutos.InserirDebitoCliente(codigoId, total))
                             {
-                                parentForm.Close();
+                                MessageBox.Show("Compra tipo convenio Concluida com sucesso!");
+                                Form parentForm = this.FindForm();
+                                if (parentForm != null)
+                                {
+                                    parentForm.Close();
+                                }
+                                e.Handled = true;
                             }
-                            e.Handled = true;
-                        }
+                            else 
+                            {
+                            MessageBox.Show("Erro ao inserir a compra ao cliente, favor procure o administrador do sistema!");
+                            }
+
+                    }
                         else
                         {
                             MessageBox.Show("Erro ao inserir a compra, favor procure o administrador do sistema!");

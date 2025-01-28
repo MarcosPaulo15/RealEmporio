@@ -106,5 +106,12 @@ namespace EmporioRoyal.View
             pcLogo.Controls.Add(myControl);
             myControl.Dock = DockStyle.Fill;
         }
+
+        private void débitosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var myControl = new UcVerClientes();
+            pcLogo.Controls.Add(myControl);
+            myControl.Dock = DockStyle.Fill;
+        }
     }
 }

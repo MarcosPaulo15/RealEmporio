@@ -129,6 +129,60 @@ namespace EmporioRoyal.Model
             return BD.Insert(sql); 
         }
 
+        public bool InserirDebitoCliente(string codigoCliente, string valorRecebido)
+        {
+            //string validaCliente = $"SELECT ROUND(SUM(VALOR_TOTAL), 2) AS TOTAL FROM DEBITO_CLIENTE WHERE ID_CLIENTE = {codigoCliente}";
+            string validaCliente = $"SELECT * FROM DEBITO_CLIENTE WHERE ID_CLIENTE = {codigoCliente} AND STATUS = '0'";
+            string g;
+            dt = BD.Consulta(validaCliente);
+
+            //Validação para verificar se existe mais de um registro, se sim ele soma os valore, se não so pega o valor que está la.
+            if (dt.Rows.Count > 0) {
+                string somaValores = $"SELECT ROUND(SUM(VALOR_TOTAL), 2) AS TOTAL FROM DEBITO_CLIENTE WHERE ID_CLIENTE = {codigoCliente} AND STATUS = 0 ";
+                dt = BD.Consulta(somaValores);
+                g = dt.Rows[0]["TOTAL"].ToString();
+            }
+            else
+            {
+                g = "";
+                DataTable k = new DataTable();
+                validaCliente = $"SELECT ID, ROUND(VALOR_TOTAL, 2) AS VALOR_TOTAL FROM DEBITO_CLIENTE WHERE ID_CLIENTE = {codigoCliente} AND STATUS = 0";
+                k = BD.Consulta(validaCliente) ;
+                /*if (k.Columns.Contains("VALOR_TOTAL"))
+                {
+                    g = k.Rows[0]["VALOR_TOTAL"].ToString();
+                }*/
+
+            }
+            
+            if (!string.IsNullOrEmpty(g) || g != "")
+            {                
+                double valorInserido = double.Parse(g);
+                valorRecebido = valorRecebido.Replace("R$", "").Trim();
+                double recebido = Convert.ToDouble(valorRecebido);
+                recebido = Math.Round(recebido, 2);
+                double total = valorInserido + recebido;
+                string sql = $"UPDATE DEBITO_CLIENTE SET VALOR_TOTAL = {total} WHERE ID_CLIENTE = {codigoCliente} AND STATUS = '0'";
+                string query = sql.Replace(",", ".");
+                return BD.Update(query);
+            }
+            else
+            {
+                int idCliente = int.Parse(codigoCliente);
+                valorRecebido = valorRecebido.Replace(',', '.');
+                valorRecebido = valorRecebido.Replace("R$", "").Trim();
+                string sql = $"INSERT INTO DEBITO_CLIENTE VALUES(NULL, {idCliente}, '{valorRecebido}', '0', NULL, NULL)";
+                return BD.Insert(sql);
+            }
+        }
+        
+        public bool AtualizaSituacaoCli(int codigoCliente)
+        {
+            DateTime data = DateTime.Today;
+            string sql = $" UPDATE DEBITO_CLIENTE SET STATUS = '1', DATA_PAGAMENTO = '{data.ToString("yyyy-MM-dd")}'  WHERE ID_CLIENTE = {codigoCliente} AND STATUS = '0'";
+            return BD.Update(sql);
+        }
+
         public bool SolicitaFechamentoCaixa(int idUsuario)
         {
             DateTime dateTime = DateTime.Today;
@@ -264,6 +318,14 @@ namespace EmporioRoyal.Model
             string sql = $"DELETE FROM VENDAS WHERE CODIGO = {idVenda} AND ID_PRODUTO = {idProd}";
 
             return BD.Delete(sql);
+        }
+
+        public bool ReduzValorTotal(double valorReduzido, int idCliente)
+        {
+            valorReduzido = Math.Round(valorReduzido, 2);
+            string sql = $"UPDATE DEBITO_CLIENTE SET VALOR_TOTAL = {valorReduzido.ToString().Replace(",", ".")} WHERE ID_CLIENTE = {idCliente} AND STATUS = 0";
+
+            return BD.Update(sql);
         }
     }
 }

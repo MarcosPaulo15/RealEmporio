@@ -30,7 +30,6 @@
         {
             panel1 = new Panel();
             lblTitle = new Label();
-            lblNome = new Label();
             txbNome = new TextBox();
             lblTelefone = new Label();
             txbTelefone = new TextBox();
@@ -45,6 +44,7 @@
             btnCancel = new Button();
             btnConfirmar = new Button();
             panCentral = new Panel();
+            label1 = new Label();
             panTotal = new Panel();
             panel1.SuspendLayout();
             panCentral.SuspendLayout();
@@ -70,20 +70,9 @@
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Registro de Clientes";
             // 
-            // lblNome
-            // 
-            lblNome.Anchor = AnchorStyles.None;
-            lblNome.AutoSize = true;
-            lblNome.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNome.Location = new Point(604, 132);
-            lblNome.Name = "lblNome";
-            lblNome.Size = new Size(86, 32);
-            lblNome.TabIndex = 1;
-            lblNome.Text = "Nome:";
-            // 
             // txbNome
             // 
-            txbNome.Location = new Point(709, 135);
+            txbNome.Location = new Point(723, 135);
             txbNome.Name = "txbNome";
             txbNome.Size = new Size(620, 31);
             txbNome.TabIndex = 2;
@@ -207,6 +196,7 @@
             // panCentral
             // 
             panCentral.BackColor = Color.Transparent;
+            panCentral.Controls.Add(label1);
             panCentral.Controls.Add(btnConfirmar);
             panCentral.Controls.Add(btnCancel);
             panCentral.Controls.Add(ckbAtivo);
@@ -220,12 +210,21 @@
             panCentral.Controls.Add(txbTelefone);
             panCentral.Controls.Add(lblTelefone);
             panCentral.Controls.Add(txbNome);
-            panCentral.Controls.Add(lblNome);
             panCentral.Dock = DockStyle.Fill;
             panCentral.Location = new Point(0, 141);
             panCentral.Name = "panCentral";
             panCentral.Size = new Size(1590, 1037);
             panCentral.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(604, 132);
+            label1.Name = "label1";
+            label1.Size = new Size(86, 32);
+            label1.TabIndex = 15;
+            label1.Text = "Nome:";
             // 
             // panTotal
             // 
@@ -274,5 +273,6 @@
         private Button btnConfirmar;
         private Panel panCentral;
         private Panel panTotal;
+        private Label label1;
     }
 }

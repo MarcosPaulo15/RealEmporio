@@ -15,7 +15,7 @@ namespace EmporioRoyal
 
         private static SQLiteConnection ConexaoBanco()
         {
-            conexao = new SQLiteConnection("Data Source=C:\\gitprojets\\RealEmporio\\bd\\bd_emporio.db");
+            conexao = new SQLiteConnection("Data Source=C:\\gitprojects\\RealEmporio\\bd\\bd_emporio.db");
             conexao.Open();
             return conexao;
         }
