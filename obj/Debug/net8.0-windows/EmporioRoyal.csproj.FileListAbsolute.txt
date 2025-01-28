@@ -130,4 +130,3 @@ C:\gitprojets\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoCancelarV
 C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoCancelarVenda.resources
 C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.UcVerClientes.resources
 C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoObservacao.resources
-C:\gitprojects\RealEmporio\obj\Debug\net8.0-windows\EmporioRoyal.View.FoAcertarFracionado.resources

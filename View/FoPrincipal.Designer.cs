@@ -48,6 +48,7 @@
             panUc = new Panel();
             lblUsuario = new Label();
             pcLogo = new PictureBox();
+            relatórioDeConveniosToolStripMenuItem = new ToolStripMenuItem();
             panMenu.SuspendLayout();
             menuStrip1.SuspendLayout();
             PanCentral.SuspendLayout();
@@ -142,7 +143,7 @@
             // 
             // relatóriosToolStripMenuItem
             // 
-            relatóriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { relatórioDeVendasToolStripMenuItem });
+            relatóriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { relatórioDeVendasToolStripMenuItem, relatórioDeConveniosToolStripMenuItem });
             relatóriosToolStripMenuItem.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             relatóriosToolStripMenuItem.Margin = new Padding(105, 0, 0, 0);
             relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
@@ -152,7 +153,7 @@
             // relatórioDeVendasToolStripMenuItem
             // 
             relatórioDeVendasToolStripMenuItem.Name = "relatórioDeVendasToolStripMenuItem";
-            relatórioDeVendasToolStripMenuItem.Size = new Size(377, 46);
+            relatórioDeVendasToolStripMenuItem.Size = new Size(417, 46);
             relatórioDeVendasToolStripMenuItem.Text = "Relatório de Vendas";
             relatórioDeVendasToolStripMenuItem.Click += relatórioDeVendasToolStripMenuItem_Click;
             // 
@@ -227,6 +228,13 @@
             pcLogo.TabIndex = 0;
             pcLogo.TabStop = false;
             // 
+            // relatórioDeConveniosToolStripMenuItem
+            // 
+            relatórioDeConveniosToolStripMenuItem.Name = "relatórioDeConveniosToolStripMenuItem";
+            relatórioDeConveniosToolStripMenuItem.Size = new Size(417, 46);
+            relatórioDeConveniosToolStripMenuItem.Text = "Relatório de Convenios";
+            relatórioDeConveniosToolStripMenuItem.Click += relatórioDeConveniosToolStripMenuItem_Click;
+            // 
             // FoPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -272,5 +280,6 @@
         private Label lblUsuario;
         private ToolStripMenuItem tlsAprovaFechamento;
         private ToolStripMenuItem débitosToolStripMenuItem;
+        private ToolStripMenuItem relatórioDeConveniosToolStripMenuItem;
     }
 }

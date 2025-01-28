@@ -113,5 +113,10 @@ namespace EmporioRoyal.View
             pcLogo.Controls.Add(myControl);
             myControl.Dock = DockStyle.Fill;
         }
+
+        private void relatórioDeConveniosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

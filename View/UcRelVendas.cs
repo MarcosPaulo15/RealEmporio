@@ -35,7 +35,7 @@ namespace EmporioRoyal.View
             double valor = Convert.ToDouble(dinheiro);
             lblDinheiro.Text = "TOTAL DINHEIRO: R$" + valor.ToString("F2");
             string pix = mdProdutos.ListaCompletaTipoPix(string.Empty, string.Empty).Rows[0]["TOTAL"].ToString();
-            lblPix.Text = "TOTAL PIX: R$ " + pix;
+            lblPix.Text = "TOTAL PIX: R$ " + pix;            
             string total = mdProdutos.ListaCompletaTipoTotal(string.Empty, string.Empty).Rows[0]["TOTAL"].ToString();
             lblTotal.Text = "TOTAL : R$ " + total;
         }
@@ -49,12 +49,14 @@ namespace EmporioRoyal.View
             dgvRelatorio.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             string tipo = mdProdutos.ListaCompletaTipoVenda(dataInic.ToString("yyyy-MM-dd"), dataFim.ToString("yyyy-MM-dd")).Rows[0]["TOTAL"].ToString();
+            tipo = string.IsNullOrEmpty(tipo) ? "0,00" : tipo;
             lblTotalCard.Text = "TOTAL CARTÃO: R$ " + tipo;
             string dinheiro = mdProdutos.ListaCompletaTipoDinheiro(dataInic.ToString("yyyy-MM-dd"), dataFim.ToString("yyyy-MM-dd")).Rows[0]["TOTAL"].ToString();
-            double valor = Convert.ToDouble(dinheiro);
+            double valor = string.IsNullOrEmpty(dinheiro) ? 0.00 : Convert.ToDouble(dinheiro);
             lblDinheiro.Text = "TOTAL DINHEIRO: R$ " + valor.ToString("F2");
             string pix = mdProdutos.ListaCompletaTipoPix(dataInic.ToString("yyyy-MM-dd"), dataFim.ToString("yyyy-MM-dd")).Rows[0]["TOTAL"].ToString();
-            lblPix.Text = "TOTAL PIX: R$ " + pix;
+            pix = string.IsNullOrEmpty(pix) ? "0,00" : pix;
+            lblPix.Text = "TOTAL PIX: R$ " + pix;            
             string total = mdProdutos.ListaCompletaTipoTotal(dataInic.ToString("yyyy-MM-dd"), dataFim.ToString("yyyy-MM-dd")).Rows[0]["TOTAL"].ToString();
             lblTotal.Text = "TOTAL : R$ " + total;
         }

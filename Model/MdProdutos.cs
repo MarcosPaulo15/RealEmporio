@@ -226,7 +226,7 @@ namespace EmporioRoyal.Model
                 "RTE.VALOR_TOTAL AS TOTAL  " +
                 "FROM REL_TIPO_ENTRADA_CAIXA  RTE " +
                 "LEFT JOIN TIPO_ENTRADA TE ON TE.CODIGO = RTE.TIPO_ENTRADA  " +
-                "WHERE DATA BETWEEN date('now', '-30 days') AND date('now'); ";
+                "WHERE DATA BETWEEN date('now', '-30 days') AND date('now') AND RTE.TIPO_ENTRADA <> '5'; ";
 
             dt = BD.Consulta(sql);
             return dt;
@@ -280,7 +280,7 @@ namespace EmporioRoyal.Model
             {
                 validaWhere = $"WHERE DATA BETWEEN '{dataInicio}' AND '{dataFim}'";
             }
-
+            validaWhere = string.IsNullOrEmpty(validaWhere) ? "WHERE RTE.TIPO_ENTRADA <> 5 " : validaWhere + "AND RTE.TIPO_ENTRADA <> 5 ";
             string sql = "SELECT RTE.DATA, " +
                 "TE.NOME AS TIPO_PAGAMENTO, " +
                 "ROUND(SUM(RTE.VALOR_TOTAL), 2) AS TOTAL " +
@@ -298,7 +298,7 @@ namespace EmporioRoyal.Model
                 "RTE.VALOR_TOTAL AS TOTAL  " +
                 "FROM REL_TIPO_ENTRADA_CAIXA  RTE " +
                 "LEFT JOIN TIPO_ENTRADA TE ON TE.CODIGO = RTE.TIPO_ENTRADA " +
-                $"WHERE DATA BETWEEN '{dataInicio}' AND '{dataFim}'";
+                $"WHERE DATA BETWEEN '{dataInicio}' AND '{dataFim}' AND RTE.TIPO_ENTRADA <> 5";
 
             dt = BD.Consulta(sql);
             return dt;

@@ -49,7 +49,14 @@ namespace EmporioRoyal.View
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
+            if(string.IsNullOrEmpty(txbSearch.Text) || txbSearch.Text.Length == 0)
+            {
+                Initialize();
+            }
+            else
+            {
+               dgvDebitos.DataSource = client.FiltraDebitoCliente(txbSearch.Text);
+            }
         }
 
         private void dgvDebitos_CellContentClick(object sender, DataGridViewCellEventArgs e)

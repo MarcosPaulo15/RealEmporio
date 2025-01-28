@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\gitprojects\\RealEmporio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\ucverclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\ucverclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\model\\mdprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:model\\mdprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\ucregistrarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\ucregistrarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\ucrelvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\ucrelvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\ucregistrarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\ucregistrarproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\ucrelvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\ucrelvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\ucverclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\ucverclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\model\\mdnovoclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:model\\mdnovoclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\foacertarfracionado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\foacertarfracionado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\ucverclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\ucverclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,82 +30,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UcVerClientes.cs",
-              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\UcVerClientes.cs",
-              "RelativeDocumentMoniker": "View\\UcVerClientes.cs",
-              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\UcVerClientes.cs",
-              "RelativeToolTip": "View\\UcVerClientes.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwHUAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "UcRelVendas.cs [Projeto]",
+              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\UcRelVendas.cs",
+              "RelativeDocumentMoniker": "View\\UcRelVendas.cs",
+              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\UcRelVendas.cs [Projeto]",
+              "RelativeToolTip": "View\\UcRelVendas.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T13:56:35.583Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UcVerClientes.cs [Projeto]",
-              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\UcVerClientes.cs",
-              "RelativeDocumentMoniker": "View\\UcVerClientes.cs",
-              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\UcVerClientes.cs [Projeto]",
-              "RelativeToolTip": "View\\UcVerClientes.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T16:49:53.726Z",
+              "WhenOpened": "2025-01-28T18:17:13.802Z",
               "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MdProdutos.cs",
-              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\Model\\MdProdutos.cs",
-              "RelativeDocumentMoniker": "Model\\MdProdutos.cs",
-              "ToolTip": "C:\\gitprojects\\RealEmporio\\Model\\MdProdutos.cs",
-              "RelativeToolTip": "Model\\MdProdutos.cs",
-              "ViewState": "AgIAAD4BAAAAAAAAAAAEwEUBAAAMAAAAAAAAAA==",
+              "Title": "UcRelVendas.cs",
+              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\UcRelVendas.cs",
+              "RelativeDocumentMoniker": "View\\UcRelVendas.cs",
+              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\UcRelVendas.cs",
+              "RelativeToolTip": "View\\UcRelVendas.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAADgvzUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T17:25:46.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UcRegistrarProduto.cs",
-              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\UcRegistrarProduto.cs",
-              "RelativeDocumentMoniker": "View\\UcRegistrarProduto.cs",
-              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\UcRegistrarProduto.cs",
-              "RelativeToolTip": "View\\UcRegistrarProduto.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAA2wCYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T12:58:15.562Z",
+              "WhenOpened": "2025-01-28T12:58:15.521Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UcRegistrarProduto.cs [Projeto]",
-              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\UcRegistrarProduto.cs",
-              "RelativeDocumentMoniker": "View\\UcRegistrarProduto.cs",
-              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\UcRegistrarProduto.cs [Projeto]",
-              "RelativeToolTip": "View\\UcRegistrarProduto.cs [Projeto]",
+              "Title": "MdNovoClient.cs",
+              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\Model\\MdNovoClient.cs",
+              "RelativeDocumentMoniker": "Model\\MdNovoClient.cs",
+              "ToolTip": "C:\\gitprojects\\RealEmporio\\Model\\MdNovoClient.cs",
+              "RelativeToolTip": "Model\\MdNovoClient.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAApwGMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T17:35:42.555Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-01-28T17:50:26.498Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FoAcertarFracionado.cs",
-              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\FoAcertarFracionado.cs",
-              "RelativeDocumentMoniker": "View\\FoAcertarFracionado.cs",
-              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\FoAcertarFracionado.cs",
-              "RelativeToolTip": "View\\FoAcertarFracionado.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAEwDEAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MdProdutos.cs",
+              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\Model\\MdProdutos.cs",
+              "RelativeDocumentMoniker": "Model\\MdProdutos.cs",
+              "ToolTip": "C:\\gitprojects\\RealEmporio\\Model\\MdProdutos.cs",
+              "RelativeToolTip": "Model\\MdProdutos.cs",
+              "ViewState": "AgIAAPMAAAAAAAAAAADgv/kAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T13:44:45.195Z",
+              "WhenOpened": "2025-01-28T17:50:11.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UcVerClientes.cs",
+              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\UcVerClientes.cs",
+              "RelativeDocumentMoniker": "View\\UcVerClientes.cs",
+              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\UcVerClientes.cs",
+              "RelativeToolTip": "View\\UcVerClientes.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAADwvzkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T13:56:35.583Z",
               "EditorCaption": ""
             }
           ]

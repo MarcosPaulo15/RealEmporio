@@ -85,9 +85,18 @@ namespace EmporioRoyal.Model
             return dt;
         }
 
-       /* public bool QuitarDebitoTotal()
+      public DataTable FiltraDebitoCliente(string filtro)
         {
-            string sql = "UPDATE REL_TIPO_ENTRADA_CAIX SET "
-        }*/
+            string sql = "SELECT DC.ID, " +
+                         "CLI.NOME, " +
+                         "CLI.TELEFONE, " +
+                         "CLI.WHATSAPP, " +
+                         "DC.VALOR_TOTAL FROM DEBITO_CLIENTE DC " +
+                         "LEFT JOIN CLIENTES CLI ON (CLI.ID = DC.ID_CLIENTE) " +
+                         $"WHERE ID_CLIENTE LIKE ('%{filtro}%') OR CLI.NOME LIKE ('%{filtro}%') OR CLI.TELEFONE  LIKE ('%{filtro}%') AND DC.STATUS = '0'";
+            dt = BD.Consulta(sql);
+
+            return dt; 
+        }
     }
 }
