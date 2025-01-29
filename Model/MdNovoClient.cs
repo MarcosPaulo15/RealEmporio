@@ -85,18 +85,44 @@ namespace EmporioRoyal.Model
             return dt;
         }
 
-      public DataTable FiltraDebitoCliente(string filtro)
-        {
+       public DataTable FiltraDebitoCliente(string filtro)
+       {
             string sql = "SELECT DC.ID, " +
-                         "CLI.NOME, " +
-                         "CLI.TELEFONE, " +
-                         "CLI.WHATSAPP, " +
-                         "DC.VALOR_TOTAL FROM DEBITO_CLIENTE DC " +
-                         "LEFT JOIN CLIENTES CLI ON (CLI.ID = DC.ID_CLIENTE) " +
-                         $"WHERE ID_CLIENTE LIKE ('%{filtro}%') OR CLI.NOME LIKE ('%{filtro}%') OR CLI.TELEFONE  LIKE ('%{filtro}%') AND DC.STATUS = '0'";
+                            "CLI.NOME, " +
+                            "CLI.TELEFONE, " +
+                            "CLI.WHATSAPP, " +
+                            "DC.VALOR_TOTAL FROM DEBITO_CLIENTE DC " +
+                            "LEFT JOIN CLIENTES CLI ON (CLI.ID = DC.ID_CLIENTE) " +
+                            $"WHERE ID_CLIENTE LIKE ('%{filtro}%') OR CLI.NOME LIKE ('%{filtro}%') OR CLI.TELEFONE  LIKE ('%{filtro}%') AND DC.STATUS = '0'";
             dt = BD.Consulta(sql);
 
             return dt; 
+       }
+
+        public DataTable ConsultaRelatorioDebitoCompleto(int status)
+        {
+            string where = status == 3 ? "" : $"WHERE STATUS = {status}";
+            string sql = "SELECT DC.ID, " +
+                         "CLI.NOME, " +
+                         "DC.VALOR_TOTAL, " +
+                         "(CASE WHEN DC.STATUS = 0 THEN 'ABERTO' ELSE 'FECHADA' END) AS STATUS, " +
+                         "CLI.TELEFONE, (CASE WHEN WHATSAPP = 1 THEN 'S' ELSE 'N' END) AS WHATSAPP " +
+                         $"FROM DEBITO_CLIENTE DC LEFT JOIN CLIENTES CLI ON (DC.ID_CLIENTE = CLI.ID) " + where;
+
+
+            dt = BD.Consulta(sql);
+            return dt;
+        }
+
+        public DataTable ConsultaRelatorioDebitoValores()
+        {
+            string sql = "SELECT (SELECT ROUND(SUM(VALOR_TOTAL), 2) FROM DEBITO_CLIENTE WHERE STATUS = 0)AS ABERTOS, " +
+                "(SELECT ROUND(SUM(VALOR_TOTAL), 2) FROM DEBITO_CLIENTE WHERE STATUS = 1) AS FECHADO, " +
+                "ROUND(SUM(VALOR_TOTAL), 2) AS TOTAL FROM DEBITO_CLIENTE DC";
+
+
+            dt = BD.Consulta(sql);
+            return dt;
         }
     }
 }

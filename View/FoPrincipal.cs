@@ -116,7 +116,9 @@ namespace EmporioRoyal.View
 
         private void relatórioDeConveniosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var myControl = new UcRelDebitoConvenio();
+            pcLogo.Controls.Add(myControl);
+            myControl.Dock = DockStyle.Fill;
         }
     }
 }
