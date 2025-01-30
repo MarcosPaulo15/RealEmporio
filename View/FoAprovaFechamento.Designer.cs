@@ -80,7 +80,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "APROVAR FECHAMENTO";
             TopMost = true;
-            WindowState = FormWindowState.Minimized;
             panTitulo.ResumeLayout(false);
             panTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAprova).EndInit();

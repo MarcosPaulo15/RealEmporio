@@ -6,6 +6,7 @@ using System.Data.Entity.Core.Common.EntitySql;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.VisualStyles;
 
 namespace EmporioRoyal.Model
 {
@@ -18,6 +19,10 @@ namespace EmporioRoyal.Model
         int quantidade;
         string descricao;
         DateTime vencimento;
+        double precoCusto;
+        int porcentagem;
+        int quantidadeAtual;
+        string tipoMedida;
 
         public long Codigo
         {
@@ -55,10 +60,35 @@ namespace EmporioRoyal.Model
             set { vencimento = value; }
         }
 
+        public double PrecoCusto
+        {
+            get { return precoCusto; }
+            set { precoCusto = value; }
+        }
+
+        public int Porcentagem
+        {
+            get { return porcentagem; }
+            set { porcentagem = value; }
+        }
+
+        public int QuantidadeAtual
+        {
+            get { return quantidadeAtual; }
+            set { quantidade = value; }
+        }
+
+        public string TipoMedida
+        {
+            get { return tipoMedida; }
+            set { tipoMedida = value; }
+        }
 
         public bool insert()
         {
-            string query = $"INSERT INTO PRODUTOS VALUES({Codigo}, '{Nome}', '{Descricao}', {Quantidade}, '{Valor}', NULL )";
+            DateTime data = DateTime.Today;
+            
+            string query = $"INSERT INTO PRODUTOS VALUES({Codigo}, '{Nome}', '{Descricao}', {Quantidade}, '{Valor}', '{data.ToString("yyyy-MM-dd")}', '{PrecoCusto}', {Porcentagem}, '{QuantidadeAtual}', '{tipoMedida}' )";
             bool validaInsertProdutos = BD.Insert(query);
             return validaInsertProdutos;
         }

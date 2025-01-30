@@ -41,6 +41,7 @@
             entradaDeProdutosToolStripMenuItem = new ToolStripMenuItem();
             relatóriosToolStripMenuItem = new ToolStripMenuItem();
             relatórioDeVendasToolStripMenuItem = new ToolStripMenuItem();
+            relatórioDeConveniosToolStripMenuItem = new ToolStripMenuItem();
             vendaToolStripMenuItem = new ToolStripMenuItem();
             tlsAprovaFechamento = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
@@ -48,7 +49,6 @@
             panUc = new Panel();
             lblUsuario = new Label();
             pcLogo = new PictureBox();
-            relatórioDeConveniosToolStripMenuItem = new ToolStripMenuItem();
             panMenu.SuspendLayout();
             menuStrip1.SuspendLayout();
             PanCentral.SuspendLayout();
@@ -157,6 +157,13 @@
             relatórioDeVendasToolStripMenuItem.Text = "Relatório de Vendas";
             relatórioDeVendasToolStripMenuItem.Click += relatórioDeVendasToolStripMenuItem_Click;
             // 
+            // relatórioDeConveniosToolStripMenuItem
+            // 
+            relatórioDeConveniosToolStripMenuItem.Name = "relatórioDeConveniosToolStripMenuItem";
+            relatórioDeConveniosToolStripMenuItem.Size = new Size(417, 46);
+            relatórioDeConveniosToolStripMenuItem.Text = "Relatório de Convenios";
+            relatórioDeConveniosToolStripMenuItem.Click += relatórioDeConveniosToolStripMenuItem_Click;
+            // 
             // vendaToolStripMenuItem
             // 
             vendaToolStripMenuItem.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -227,13 +234,6 @@
             pcLogo.Size = new Size(1370, 668);
             pcLogo.TabIndex = 0;
             pcLogo.TabStop = false;
-            // 
-            // relatórioDeConveniosToolStripMenuItem
-            // 
-            relatórioDeConveniosToolStripMenuItem.Name = "relatórioDeConveniosToolStripMenuItem";
-            relatórioDeConveniosToolStripMenuItem.Size = new Size(417, 46);
-            relatórioDeConveniosToolStripMenuItem.Text = "Relatório de Convenios";
-            relatórioDeConveniosToolStripMenuItem.Click += relatórioDeConveniosToolStripMenuItem_Click;
             // 
             // FoPrincipal
             // 

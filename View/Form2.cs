@@ -17,6 +17,7 @@ namespace EmporioRoyal.View
         int idMax;
         string nome = string.Empty;
         int usuarioID;
+        bool teste = false; 
         public FoVendas2()
         {
             InitializeComponent();
@@ -189,6 +190,8 @@ namespace EmporioRoyal.View
                 buttonColumn.UseColumnTextForButtonValue = true;
                 dgvListaProdutos.Columns.Add(buttonColumn);
 
+                teste = true;
+
                 
             }
             if (e.KeyCode == Keys.Escape)
@@ -227,13 +230,17 @@ namespace EmporioRoyal.View
 
         private void dgvListaProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Verifique se a coluna "Ação" existe e se o índice da coluna está correto
-            if (e.ColumnIndex == dgvListaProdutos.Columns["Ação"].Index && e.RowIndex >= 0)
+            if (teste)
             {
-                int idProd = Convert.ToInt32(dgvListaProdutos.Rows[e.RowIndex].Cells["CODIGO_PRODUTO"].Value);
-                ValidaExclusãoProd(idProd);
-                Initialize();
+                // Verifique se a coluna "Ação" existe e se o índice da coluna está correto
+                if (e.ColumnIndex == dgvListaProdutos.Columns["Ação"].Index && e.RowIndex >= 0)
+                {
+                    int idProd = Convert.ToInt32(dgvListaProdutos.Rows[e.RowIndex].Cells["CODIGO_PRODUTO"].Value);
+                    ValidaExclusãoProd(idProd);
+                    Initialize();
+                }
             }
+            
         }
 
         private void ValidaExclusãoProd(int idProd)

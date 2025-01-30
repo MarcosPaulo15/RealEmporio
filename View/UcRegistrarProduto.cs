@@ -16,6 +16,11 @@ namespace EmporioRoyal.View
         public UcRegistrarProduto()
         {
             InitializeComponent();
+
+            cmbUn.Items.Add("-");
+            cmbUn.Items.Add("UN");
+            cmbUn.Items.Add("KG");
+            cmbUn.Items.Add("LT");
         }
 
 
@@ -40,7 +45,7 @@ namespace EmporioRoyal.View
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.' && !char.IsControl(e.KeyChar))
             {
                 // Apenas um ponto ou vírgula decimal permitido
-                if ((e.KeyChar == '.' || e.KeyChar == ',') && (sender as TextBox).Text.Contains(".") || (sender as TextBox).Text.Contains(","))
+                if ((e.KeyChar == '.' || e.KeyChar == ',') && !(sender as TextBox).Text.Contains(".") || !(sender as TextBox).Text.Contains(","))
                 {
                     e.Handled = true;
                 }
@@ -66,10 +71,11 @@ namespace EmporioRoyal.View
         public void InsereNovosProdutos()
         {
 
-            MdProdutos mdProdutos = new MdProdutos();           
+            MdProdutos mdProdutos = new MdProdutos();
 
-            if(string.IsNullOrEmpty(txbCodigo.Text) || string.IsNullOrEmpty(txbNome.Text) || string.IsNullOrEmpty(txbDescricao.Text) ||
-                string.IsNullOrEmpty(txbQtd.Text) || string.IsNullOrEmpty(txbPreco.Text)){
+            if (string.IsNullOrEmpty(txbCodigo.Text) || string.IsNullOrEmpty(txbNome.Text) || string.IsNullOrEmpty(txbDescricao.Text) ||
+                string.IsNullOrEmpty(txbQtd.Text) || string.IsNullOrEmpty(txbPreco.Text))
+            {
 
                 MessageBox.Show("Todos os campos deve estar preenchidos, favor verificar!");
             }
@@ -80,6 +86,12 @@ namespace EmporioRoyal.View
                 mdProdutos.Descricao = txbDescricao.Text;
                 mdProdutos.Quantidade = int.Parse(txbQtd.Text);
                 mdProdutos.Valor = txbPreco.Text;
+                mdProdutos.PrecoCusto = Convert.ToDouble(txbPrecoCusto.Text);
+                mdProdutos.Porcentagem = int.Parse(txbPorcentagem.Text);
+                mdProdutos.Quantidade = int.Parse(txbQtdAtual.Text);
+                mdProdutos.TipoMedida = cmbUn.Text;
+
+
 
                 if (mdProdutos.insert())
                 {
@@ -89,13 +101,42 @@ namespace EmporioRoyal.View
                     txbDescricao.Clear();
                     txbQtd.Clear();
                     txbPreco.Clear();
+                    txbPrecoCusto.Clear();
+                    txbPorcentagem.Clear();
+                    txbQtdAtual.Clear();
                 }
                 else
                 {
                     MessageBox.Show("Falha ao inserir produto, favor procure o administrador do sistema!");
                 }
             }
-            
+
+        }
+
+        private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            // Certifique-se de que apenas números, vírgulas, pontos ou teclas de controle podem ser digitadas
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.' && !char.IsControl(e.KeyChar))
+            {
+                // Apenas um ponto ou vírgula decimal permitido
+                if ((e.KeyChar == '.' || e.KeyChar == ',') && !(sender as TextBox).Text.Contains(".") || !(sender as TextBox).Text.Contains(","))
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void txbPorcentagem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Certifique-se de que apenas números, vírgulas, pontos ou teclas de controle podem ser digitadas
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.' && !char.IsControl(e.KeyChar))
+            {
+                // Apenas um ponto ou vírgula decimal permitido
+                if ((e.KeyChar == '.' || e.KeyChar == ',') && !(sender as TextBox).Text.Contains(".") || !(sender as TextBox).Text.Contains(","))
+                {
+                    e.Handled = true;
+                }
+            }
         }
     }
 }
