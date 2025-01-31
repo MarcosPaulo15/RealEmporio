@@ -120,5 +120,12 @@ namespace EmporioRoyal.View
             pcLogo.Controls.Add(myControl);
             myControl.Dock = DockStyle.Fill;
         }
+
+        private void atualizaEstoqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var myControl = new UcAtualizarEstoque();
+            pcLogo.Controls.Add(myControl);
+            myControl.Dock = DockStyle.Fill;
+        }
     }
 }

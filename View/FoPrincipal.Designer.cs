@@ -39,6 +39,7 @@
             estoqueToolStripMenuItem = new ToolStripMenuItem();
             registrarProdutosToolStripMenuItem = new ToolStripMenuItem();
             entradaDeProdutosToolStripMenuItem = new ToolStripMenuItem();
+            atualizaEstoqueToolStripMenuItem = new ToolStripMenuItem();
             relatóriosToolStripMenuItem = new ToolStripMenuItem();
             relatórioDeVendasToolStripMenuItem = new ToolStripMenuItem();
             relatórioDeConveniosToolStripMenuItem = new ToolStripMenuItem();
@@ -120,7 +121,7 @@
             // 
             // estoqueToolStripMenuItem
             // 
-            estoqueToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registrarProdutosToolStripMenuItem, entradaDeProdutosToolStripMenuItem });
+            estoqueToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registrarProdutosToolStripMenuItem, entradaDeProdutosToolStripMenuItem, atualizaEstoqueToolStripMenuItem });
             estoqueToolStripMenuItem.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             estoqueToolStripMenuItem.Margin = new Padding(105, 0, 0, 0);
             estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
@@ -140,6 +141,13 @@
             entradaDeProdutosToolStripMenuItem.Size = new Size(367, 46);
             entradaDeProdutosToolStripMenuItem.Text = "Visualizar Produtos";
             entradaDeProdutosToolStripMenuItem.Click += entradaDeProdutosToolStripMenuItem_Click;
+            // 
+            // atualizaEstoqueToolStripMenuItem
+            // 
+            atualizaEstoqueToolStripMenuItem.Name = "atualizaEstoqueToolStripMenuItem";
+            atualizaEstoqueToolStripMenuItem.Size = new Size(367, 46);
+            atualizaEstoqueToolStripMenuItem.Text = "Atualiza Estoque";
+            atualizaEstoqueToolStripMenuItem.Click += atualizaEstoqueToolStripMenuItem_Click;
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -281,5 +289,6 @@
         private ToolStripMenuItem tlsAprovaFechamento;
         private ToolStripMenuItem débitosToolStripMenuItem;
         private ToolStripMenuItem relatórioDeConveniosToolStripMenuItem;
+        private ToolStripMenuItem atualizaEstoqueToolStripMenuItem;
     }
 }

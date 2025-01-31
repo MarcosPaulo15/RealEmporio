@@ -66,6 +66,7 @@
             lblDescricao = new Label();
             panTitulo = new Panel();
             lblTitulo = new Label();
+            label1 = new Label();
             panCentral.SuspendLayout();
             panButton.SuspendLayout();
             panLayout.SuspendLayout();
@@ -270,6 +271,7 @@
             // 
             // panel5
             // 
+            panel5.Controls.Add(label1);
             panel5.Controls.Add(lblPorcentagem);
             panel5.Controls.Add(txbPorcentagem);
             panel5.Dock = DockStyle.Left;
@@ -294,8 +296,9 @@
             txbPorcentagem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txbPorcentagem.Location = new Point(277, 41);
             txbPorcentagem.Name = "txbPorcentagem";
-            txbPorcentagem.Size = new Size(116, 31);
+            txbPorcentagem.Size = new Size(67, 31);
             txbPorcentagem.TabIndex = 9;
+            txbPorcentagem.KeyDown += txbPorcentagem_KeyDown;
             txbPorcentagem.KeyPress += txbPorcentagem_KeyPress;
             // 
             // panel4
@@ -334,6 +337,7 @@
             txbPreco.Name = "txbPreco";
             txbPreco.Size = new Size(116, 31);
             txbPreco.TabIndex = 5;
+            txbPreco.KeyDown += txbPreco_KeyDown;
             txbPreco.KeyPress += textBox3_KeyPress;
             // 
             // panel2
@@ -459,6 +463,17 @@
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Registro de Produtos";
             // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(336, 41);
+            label1.Name = "label1";
+            label1.Size = new Size(34, 32);
+            label1.TabIndex = 10;
+            label1.Text = "%";
+            // 
             // UcRegistrarProduto
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -531,5 +546,6 @@
         private Panel panel9;
         private Panel panel8;
         private Panel panel7;
+        private Label label1;
     }
 }

@@ -4,6 +4,9 @@
     <Compile Update="View\FoAprovaFechamento.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\FoAtualizaProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\FoCancelarVenda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -27,6 +30,9 @@
     </Compile>
     <Compile Update="View\FoVendas.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\UcAtualizarEstoque.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="View\UcConvenio.cs">
       <SubType>UserControl</SubType>

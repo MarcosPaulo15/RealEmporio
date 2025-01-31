@@ -93,6 +93,10 @@ namespace EmporioRoyal.View
                                     //lblSubTotalVal.Text = "R$" + valorTotal + ",00";
                                     lblSubTotalVal.Text = "R$ " + produto.SomaTodosValores(idMax).Rows[0]["TOTAL"].ToString();
                                     txbCodigoBarras.Clear();
+                                    if (!produto.AtualizaEstoque(codigo))
+                                    {
+                                        MessageBox.Show("Falha ao dar baixa no estoque, Favor procure o administrador do Sistema!");
+                                    }
                                 }
                             }
 

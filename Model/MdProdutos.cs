@@ -102,6 +102,30 @@ namespace EmporioRoyal.Model
             return dt;
         }
 
+        public DataTable ListaProdutosAlterarProd(string id)
+        {
+            string where = id != "" ? $"WHERE CODIGO = {id}" : "";
+            string sql = "SELECT CODIGO, NOME, QUANTIDADE_MINIMA, VALOR, PRECO_CUSTO, PORCENTAGEM, QUANTIDADE_ATUAL, DESCRICAO FROM PRODUTOS " + where;
+
+            dt = BD.Consulta(sql);
+            return dt;
+        }
+
+        public bool AtualizarProdutos(string codigo, string nome,string descricao, int quantidadeMin, string valorCusto, string precoVenda, string porcentagem, int quantidadeAtual, string id)
+        {
+            string sql = $"UPDATE PRODUTOS SET CODIGO = '{codigo}', NOME = '{nome}',  DESCRICAO = '{descricao}', QUANTIDADE_MINIMA = {quantidadeMin}, PRECO_CUSTO = {valorCusto}, VALOR = {precoVenda}, PORCENTAGEM = {porcentagem}, QUANTIDADE_ATUAL = {quantidadeAtual} WHERE CODIGO = {id}";
+
+            return BD.Update(sql);
+        }
+
+        public DataTable FiltraProdutoAtualizar(string produto)
+        {
+            string where = produto == "" ? "" : $"WHERE CODIGO LIKE '%{produto}%' OR NOME LIKE ('%{produto}%')";
+            string sql = $"SELECT CODIGO, NOME, QUANTIDADE_MINIMA, VALOR, PRECO_CUSTO, PORCENTAGEM, QUANTIDADE_ATUAL, DESCRICAO FROM PRODUTOS " + where;
+            dt = BD.Consulta(sql);
+
+            return dt; 
+        }
         public DataTable IdMax()
         {
             string sql = "SELECT MAX(CODIGO) AS CODIGO FROM VENDAS ";
@@ -354,6 +378,19 @@ namespace EmporioRoyal.Model
         {
             valorReduzido = Math.Round(valorReduzido, 2);
             string sql = $"UPDATE DEBITO_CLIENTE SET VALOR_TOTAL = {valorReduzido.ToString().Replace(",", ".")} WHERE ID_CLIENTE = {idCliente} AND STATUS = 0";
+
+            return BD.Update(sql);
+        }
+
+        public bool AtualizaEstoque(long codigo)
+        {
+            string query = $"SELECT QUANTIDADE_ATUAL FROM PRODUTOS WHERE CODIGO = {codigo}";
+            dt = BD.Consulta(query);
+
+            int quantidadeAtual = int.Parse(dt.Rows[0]["QUANTIDADE_ATUAL"].ToString());
+            int quantidadeAlterada = quantidadeAtual - 1;
+
+            string sql = $"UPDATE PRODUTOS SET QUANTIDADE_ATUAL = {quantidadeAlterada}  WHERE CODIGO = {codigo}";
 
             return BD.Update(sql);
         }

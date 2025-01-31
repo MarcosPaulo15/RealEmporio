@@ -138,5 +138,40 @@ namespace EmporioRoyal.View
                 }
             }
         }
+
+        private void txbPorcentagem_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if ((string.IsNullOrEmpty(txbPreco.Text) || txbPreco.Text == "") && (!string.IsNullOrEmpty(txbPorcentagem.Text) || txbPorcentagem.Text != ""))
+                {
+                    if (!string.IsNullOrEmpty(txbPrecoCusto.Text))
+                    {
+                        double precoCusto = Convert.ToDouble(txbPrecoCusto.Text);
+                        double valor = precoCusto * (Convert.ToDouble(txbPorcentagem.Text) / 100);
+                        double total = precoCusto + valor;
+                        txbPreco.Text = total.ToString();
+                    }
+                }
+            }
+        }
+
+        private void txbPreco_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (!(string.IsNullOrEmpty(txbPreco.Text) || txbPreco.Text == "") && !(!string.IsNullOrEmpty(txbPorcentagem.Text) || txbPorcentagem.Text != ""))
+                {
+                    if (!string.IsNullOrEmpty(txbPrecoCusto.Text))
+                    {
+                        double precoCusto = Convert.ToDouble(txbPrecoCusto.Text);
+                        double porcentagem = ((Convert.ToDouble(txbPreco.Text) - precoCusto) / precoCusto) * 100;
+
+                        txbPorcentagem.Text = porcentagem.ToString();
+                    }
+                }
+
+            }                
+        }
     }
 }
