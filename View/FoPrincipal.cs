@@ -127,5 +127,15 @@ namespace EmporioRoyal.View
             pcLogo.Controls.Add(myControl);
             myControl.Dock = DockStyle.Fill;
         }
+
+        private void FoPrincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F12)
+            {
+                MdProdutos mdProdutos = new MdProdutos();
+                string message = mdProdutos.SolicitaFechamentoCaixa(usuarioId) ? "CAIXA FECHADO COM SUCESSO!" : "FALHA AO FECHAR O CAIXA, FAVOR CONTATE ADMINISTRADOR DO SISTEMA";
+                MessageBox.Show(message);
+            }
+        }
     }
 }

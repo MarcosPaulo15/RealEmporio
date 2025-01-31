@@ -45,14 +45,15 @@ namespace EmporioRoyal.View
             if (e.ColumnIndex == dgvAprova.Columns["Ação"].Index && e.RowIndex >= 0)
             {
                 int idUser = Convert.ToInt32(dgvAprova.Rows[e.RowIndex].Cells["CODIGO_USUARIO"].Value);
-                AprovacaoFechamentoCaixa(idUser);
+                string data = dgvAprova.Rows[e.RowIndex].Cells["DATA"].Value.ToString();
+                AprovacaoFechamentoCaixa(idUser, data);
             }
         }
 
 
-        private void AprovacaoFechamentoCaixa(int idUsu)
+        private void AprovacaoFechamentoCaixa(int idUsu, string data)
         {
-            if (mdProdutos.AprovaFechamento(idUsu))
+            if (mdProdutos.AprovaFechamento(idUsu, data))
             {
                 MessageBox.Show("Fechamento deste usuario realizado! Obrigado!");
                 Hide();

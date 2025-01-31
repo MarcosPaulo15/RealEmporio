@@ -256,6 +256,7 @@
             Name = "FoPrincipal";
             Text = "Principal";
             WindowState = FormWindowState.Maximized;
+            KeyDown += FoPrincipal_KeyDown;
             panMenu.ResumeLayout(false);
             panMenu.PerformLayout();
             menuStrip1.ResumeLayout(false);

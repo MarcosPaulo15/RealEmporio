@@ -260,9 +260,9 @@ namespace EmporioRoyal.Model
             return dt;
         }
 
-        public bool AprovaFechamento(int idUsu)
+        public bool AprovaFechamento(int idUsu, string data)
         {
-            string query = $"UPDATE REL_TIPO_ENTRADA_CAIXA SET APROVA_FECHAMENTO = '1' WHERE ID_USER = {idUsu}";
+            string query = $"UPDATE REL_TIPO_ENTRADA_CAIXA SET APROVA_FECHAMENTO = '1' WHERE ID_USER = {idUsu} AND DATA = '{data}'";
             return BD.Update(query);
         }
 
