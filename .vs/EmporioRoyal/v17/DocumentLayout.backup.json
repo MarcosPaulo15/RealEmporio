@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\gitprojects\\RealEmporio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\model\\mdprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:model\\mdprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\foaprovafechamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\foaprovafechamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\foaprovafechamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\model\\mdprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:model\\mdprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|C:\\gitprojects\\RealEmporio\\view\\foaprovafechamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\foaprovafechamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -19,11 +19,11 @@
       "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\foprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\foprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|C:\\gitprojects\\RealEmporio\\view\\foprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\foprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|c:\\gitprojects\\realemporio\\view\\foperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|C:\\gitprojects\\RealEmporio\\view\\foperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F15035F6-5041-41A4-9BDE-DB23991540DE}|EmporioRoyal.csproj|solutionrelative:view\\foperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -38,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MdProdutos.cs",
               "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\Model\\MdProdutos.cs",
               "RelativeDocumentMoniker": "Model\\MdProdutos.cs",
@@ -50,33 +50,20 @@
               "RelativeToolTip": "Model\\MdProdutos.cs",
               "ViewState": "AgIAAPoAAAAAAAAAAAApwAgBAACCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T19:39:09.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-31T19:39:09.136Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FoAprovaFechamento.cs",
               "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\FoAprovaFechamento.cs",
               "RelativeDocumentMoniker": "View\\FoAprovaFechamento.cs",
               "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\FoAprovaFechamento.cs",
               "RelativeToolTip": "View\\FoAprovaFechamento.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAowDcAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAowDMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-31T19:39:01.635Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FoAprovaFechamento.cs [Projeto]",
-              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\FoAprovaFechamento.cs",
-              "RelativeDocumentMoniker": "View\\FoAprovaFechamento.cs",
-              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\FoAprovaFechamento.cs [Projeto]",
-              "RelativeToolTip": "View\\FoAprovaFechamento.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T19:38:59.111Z",
-              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
@@ -93,18 +80,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FoPrincipal.cs [Projeto]",
-              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\FoPrincipal.cs",
-              "RelativeDocumentMoniker": "View\\FoPrincipal.cs",
-              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\FoPrincipal.cs [Projeto]",
-              "RelativeToolTip": "View\\FoPrincipal.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T19:27:13.269Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
               "Title": "FoPerfil.cs",
               "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\FoPerfil.cs",
@@ -118,6 +93,28 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FoAprovaFechamento.cs [Projeto]",
+              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\FoAprovaFechamento.cs",
+              "RelativeDocumentMoniker": "View\\FoAprovaFechamento.cs",
+              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\FoAprovaFechamento.cs [Projeto]",
+              "RelativeToolTip": "View\\FoAprovaFechamento.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T19:38:59.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FoPrincipal.cs [Projeto]",
+              "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\FoPrincipal.cs",
+              "RelativeDocumentMoniker": "View\\FoPrincipal.cs",
+              "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\FoPrincipal.cs [Projeto]",
+              "RelativeToolTip": "View\\FoPrincipal.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T19:27:13.269Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
               "Title": "FoPerfil.cs [Projeto]",
               "DocumentMoniker": "C:\\gitprojects\\RealEmporio\\View\\FoPerfil.cs",
@@ -125,8 +122,7 @@
               "ToolTip": "C:\\gitprojects\\RealEmporio\\View\\FoPerfil.cs [Projeto]",
               "RelativeToolTip": "View\\FoPerfil.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T19:26:45.11Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-01-31T19:26:45.11Z"
             }
           ]
         }
