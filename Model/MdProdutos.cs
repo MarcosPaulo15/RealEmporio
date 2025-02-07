@@ -20,8 +20,8 @@ namespace EmporioRoyal.Model
         string descricao;
         DateTime vencimento;
         double precoCusto;
-        int porcentagem;
-        int quantidadeAtual;
+        string porcentagem;
+        string quantidadeAtual;
         string tipoMedida;
 
         public long Codigo
@@ -66,16 +66,16 @@ namespace EmporioRoyal.Model
             set { precoCusto = value; }
         }
 
-        public int Porcentagem
+        public string Porcentagem
         {
             get { return porcentagem; }
             set { porcentagem = value; }
         }
 
-        public int QuantidadeAtual
+        public string QuantidadeAtual
         {
             get { return quantidadeAtual; }
-            set { quantidade = value; }
+            set { quantidadeAtual = value; }
         }
 
         public string TipoMedida

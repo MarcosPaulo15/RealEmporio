@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -87,8 +88,10 @@ namespace EmporioRoyal.View
                 mdProdutos.Quantidade = int.Parse(txbQtd.Text);
                 mdProdutos.Valor = txbPreco.Text;
                 mdProdutos.PrecoCusto = Convert.ToDouble(txbPrecoCusto.Text);
-                mdProdutos.Porcentagem = int.Parse(txbPorcentagem.Text);
+                string txbporc = txbPorcentagem.Text.Replace(",", ".");
+                mdProdutos.Porcentagem = txbporc;
                 mdProdutos.Quantidade = int.Parse(txbQtdAtual.Text);
+                mdProdutos.QuantidadeAtual = txbQtdAtual.Text;
                 mdProdutos.TipoMedida = cmbUn.Text;
 
 
@@ -146,7 +149,7 @@ namespace EmporioRoyal.View
                 if ((string.IsNullOrEmpty(txbPreco.Text) || txbPreco.Text == "") && (!string.IsNullOrEmpty(txbPorcentagem.Text) || txbPorcentagem.Text != ""))
                 {
                     if (!string.IsNullOrEmpty(txbPrecoCusto.Text))
-                    {
+                    {                        
                         double precoCusto = Convert.ToDouble(txbPrecoCusto.Text);
                         double valor = precoCusto * (Convert.ToDouble(txbPorcentagem.Text) / 100);
                         double total = precoCusto + valor;
@@ -167,7 +170,7 @@ namespace EmporioRoyal.View
                         double precoCusto = Convert.ToDouble(txbPrecoCusto.Text);
                         double porcentagem = ((Convert.ToDouble(txbPreco.Text) - precoCusto) / precoCusto) * 100;
 
-                        txbPorcentagem.Text = porcentagem.ToString();
+                        txbPorcentagem.Text = Math.Round(porcentagem, 2).ToString();
                     }
                 }
 

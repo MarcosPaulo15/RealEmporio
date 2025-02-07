@@ -17,7 +17,9 @@ namespace EmporioRoyal.View
         int idMax;
         string nome = string.Empty;
         int usuarioID;
-        bool teste = false; 
+        bool teste; 
+        private DataGridViewButtonColumn buttonColumn;
+
         public FoVendas2()
         {
             InitializeComponent();
@@ -30,7 +32,7 @@ namespace EmporioRoyal.View
             //Initialize(id);
             idMax = id;
             usuarioID = idUsuario;
-
+            //bool teste = true;
             Initialize();
         }
 
@@ -183,36 +185,62 @@ namespace EmporioRoyal.View
                 panel11.Controls.Add(myControl);
                 myControl.Dock = DockStyle.Fill;
             }
-            DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
+
             if (e.KeyCode == Keys.F6)
             {
-                // Adiciona a coluna de botão ao DataGridView
-                
-                buttonColumn.HeaderText = "Deletar";
-                buttonColumn.Name = "Ação";  // Certifique-se de definir o nome da coluna
-                buttonColumn.Text = "Deletar";
-                buttonColumn.UseColumnTextForButtonValue = true;
-                dgvListaProdutos.Columns.Add(buttonColumn);
-
-                teste = true;
-
-                
-            }
-            if (e.KeyCode == Keys.Escape)
-            {
-                if (e.KeyCode == Keys.Escape)
+                // Adicionar coluna de botão se não existir
+                if (dgvListaProdutos.Columns["Ação"] == null)
                 {
-                    // Define a visibilidade da coluna de botão para false
-                    if (dgvListaProdutos.Columns["Ação"] != null)
-                    {
-                        dgvListaProdutos.Columns["Ação"].Visible = false;
-                    }
+                    buttonColumn = new DataGridViewButtonColumn();
+                    buttonColumn.HeaderText = "Deletar";
+                    buttonColumn.Name = "Ação";  // Certifique-se de definir o nome da coluna
+                    buttonColumn.Text = "Deletar";
+                    buttonColumn.UseColumnTextForButtonValue = true;
+                    dgvListaProdutos.Columns.Add(buttonColumn);
                 }
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                // Remover coluna de botão se existir
+                if (dgvListaProdutos.Columns["Ação"] != null)
+                {
+                    dgvListaProdutos.Columns.Remove("Ação");
+                    buttonColumn = null;
+                }
+
             }
         }
 
+        private void dgvListaProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifique se o índice da coluna está correto e se o índice da linha é válido
+            if (e.ColumnIndex >= 0 && e.RowIndex >= 0)
+            {
+                // Verifique se a coluna "Ação" existe e se é a coluna clicada
+                if (dgvListaProdutos.Columns[e.ColumnIndex].Name == "Ação")
+                {
+                    // Verifique se a célula "CODIGO_PRODUTO" existe
+                    if (dgvListaProdutos.Rows[e.RowIndex].Cells["CODIGO_PRODUTO"].Value != null)
+                    {
+                        try
+                        {
+                            int idProd = Convert.ToInt32(dgvListaProdutos.Rows[e.RowIndex].Cells["CODIGO_PRODUTO"].Value);
+                            ValidaExclusãoProd(idProd);
+                            Initialize();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Erro ao converter o ID do produto: " + ex.Message);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("A célula 'CODIGO_PRODUTO' está vazia.");
+                    }
+                }
 
-
+            }
+        }
 
         public void LoadList(int id)
         {
@@ -232,20 +260,6 @@ namespace EmporioRoyal.View
             }
         }
 
-        private void dgvListaProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (teste)
-            {
-                // Verifique se a coluna "Ação" existe e se o índice da coluna está correto
-                if (e.ColumnIndex == dgvListaProdutos.Columns["Ação"].Index && e.RowIndex >= 0)
-                {
-                    int idProd = Convert.ToInt32(dgvListaProdutos.Rows[e.RowIndex].Cells["CODIGO_PRODUTO"].Value);
-                    ValidaExclusãoProd(idProd);
-                    Initialize();
-                }
-            }
-            
-        }
 
         private void ValidaExclusãoProd(int idProd)
         {
