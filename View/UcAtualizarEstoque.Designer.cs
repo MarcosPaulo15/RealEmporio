@@ -67,6 +67,9 @@
             dgvLista.Size = new Size(1743, 473);
             dgvLista.TabIndex = 3;
             dgvLista.CellContentClick += dgvLista_CellContentClick;
+            dgvLista.CellFormatting += dgvLista_CellFormatting;
+            dgvLista.CellMouseEnter += dgvLista_CellMouseEnter;
+            dgvLista.CellMouseLeave += dgvLista_CellMouseLeave;
             // 
             // panBusca
             // 

@@ -358,6 +358,14 @@ namespace EmporioRoyal.Model
             return dt;
         }
 
+        public DataTable ExibeMsg()
+        {
+            string sql = "SELECT NOME, QUANTIDADE_ATUAL AS QUANTIDADE FROM PRODUTOS WHERE QUANTIDADE_ATUAL <= QUANTIDADE_MINIMA";
+
+            dt = BD.Consulta(sql);
+            return dt;
+        }
+
 
         public bool InsereClienteCompra(string codigoCliente, int codigoCompra)
         {

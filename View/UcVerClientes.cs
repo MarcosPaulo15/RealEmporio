@@ -90,7 +90,7 @@ namespace EmporioRoyal.View
 
         private void txbValor_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Enter)
             {
                 if (string.IsNullOrEmpty(txbValor.Text) || txbValor.Text == "")
                 {

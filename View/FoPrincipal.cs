@@ -25,7 +25,20 @@ namespace EmporioRoyal.View
             InitializeComponent();
             pcLogo.Visible = true;
             lblUsuario.Text = "Usuário: " + usuario;
-            usuarioId = idUser;
+            usuarioId = idUser;            
+            ExibeMessagem();
+                
+        }
+
+        public void ExibeMessagem()
+        {
+            MdProdutos prod = new MdProdutos();
+            if (prod.ExibeMsg().Rows.Count > 0)
+            {                
+                FoMessagem fo = new FoMessagem();
+                fo.Focus();
+                fo.ShowDialog();
+            }
         }
         private void adicionarNovoClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {

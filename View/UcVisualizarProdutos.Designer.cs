@@ -94,6 +94,9 @@
             dgvLista.RowHeadersWidth = 62;
             dgvLista.Size = new Size(1904, 653);
             dgvLista.TabIndex = 0;
+            dgvLista.CellFormatting += dgvLista_CellFormatting;
+            dgvLista.CellMouseEnter += dgvLista_CellMouseEnter;
+            dgvLista.CellMouseLeave += dgvLista_CellMouseLeave;
             // 
             // panTitle
             // 
